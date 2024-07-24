@@ -1,0 +1,26 @@
+@font-face {
+  font-family: "VLABRAHAMLINCOLN";
+  src: url("../../../../../assets/font/VLABRAHAMLINCOLN.OTF") format("truetype"); /* Đường dẫn tới font file */
+}
+
+body {
+  font-family: "VLABRAHAMLINCOLN", sans-serif; /* Sử dụng font cho các phần tử trong body */
+}
+
+@font-face {
+  font-family: "Antique Book Cover";
+  src: url("../../../../../assets/font/ANTIQUE\ BOOK\ COVER.OTF") format("truetype");
+}
+
+body {
+  font-family: "Antique Book Cover", sans-serif;
+}
+
+@font-face {
+  font-family: "UTM Swiss Condensed Regular";
+  src: url("../../../../../assets/font/UTM\ SWISS\ CONDENSED.TTF") format("truetype");
+}
+
+body {
+  font-family: "UTM Swiss Condensed Regular", sans-serif;
+}
