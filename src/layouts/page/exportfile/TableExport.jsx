@@ -103,7 +103,7 @@ function ExcelTable() {
     };
     try {
       const response = await axios.post(
-        "https://thienva-001-site1.gtempurl.com/api/v1/candidates/list-candidate",
+        "https://liemtroller-001-site1.jtempurl.com/api/v1/candidates/list-candidate",
         payload,
         {
           headers: {

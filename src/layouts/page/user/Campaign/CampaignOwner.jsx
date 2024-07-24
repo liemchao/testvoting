@@ -144,7 +144,7 @@ export default function CampaignOwenrList() {
   const handleUpdateProcess = useCallback(async (id) => {
     try {
       const response = await axios.put(
-        `https://thienva-001-site1.gtempurl.com/api/v1/campaigns/update-process`,
+        `https://liemtroller-001-site1.jtempurl.com/api/v1/campaigns/update-process`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -168,7 +168,7 @@ export default function CampaignOwenrList() {
   const handleUpdateRelust = useCallback(async (id) => {
     try {
       const response = await axios.put(
-        `https://thienva-001-site1.gtempurl.com/api/v1/campaigns/publish-result/6097a517-11ad-4105-b26a-0e93bea2cb43`,
+        `https://liemtroller-001-site1.jtempurl.com/api/v1/campaigns/publish-result/6097a517-11ad-4105-b26a-0e93bea2cb43`,
         {},
         {
           headers: {

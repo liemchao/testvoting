@@ -91,6 +91,7 @@
   },
   "devDependencies": {
     "@iconify/react": "^4.1.0",
+    "ajv": "^7.2.4",
     "cross-env": "^7.0.3",
     "source-map-loader": "^4.0.1"
   },

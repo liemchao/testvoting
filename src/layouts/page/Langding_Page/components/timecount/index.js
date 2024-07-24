@@ -18,7 +18,7 @@ const CountdownTimer = () => {
 
   useEffect(() => {
     axios
-      .get("https://thienva-001-site1.gtempurl.com/api/v1/campaigns/representative")
+      .get("https://liemtroller-001-site1.jtempurl.com/api/v1/campaigns/representative")
       .then((response) => {
         const now = new Date();
         const endTimeValue = dayjs(response.data.data.endTime).format("DD-MM-YYYY HH:mm:ss");
