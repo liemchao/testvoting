@@ -33,7 +33,7 @@ export default function CampaignStageList() {
   useEffect(() => {
     const callAPIgetList = async () => {
       dispatch(handleGetStage(id, token));
-      dispatch(CheckVoter(decode.Username, id, token));
+      dispatch(CheckVoter(decode.Username || decode.userId, id, token));
     };
     callAPIgetList();
   }, [id, navigate]);

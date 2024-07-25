@@ -96,7 +96,7 @@ export function NavigationPopup(props) {
           message: "Cập nhật nhóm thành công",
           type: "SUCCESS",
         });
-        await dispatch(getScorebyStage(IdStage, deToken.Username, token));
+        await dispatch(getScorebyStage(id, deToken.Username || deToken.userId, token));
         onClose();
       }
     } catch (error) {

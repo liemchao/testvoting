@@ -315,13 +315,17 @@ export default function Select3() {
                           textAlign: "start", // Căn giữa nội dung
                         }}
                       >
-                        {designhome.description3?.split(".").map((sentence, index) => (
-                          <React.Fragment key={index}>
-                            {index > 0} {/* Thêm dấu chấm (.) trước câu từ thứ hai trở đi */}
-                            {sentence}
-                            <br /> {/* Xuống dòng sau mỗi câu */}
-                          </React.Fragment>
-                        ))}
+                        {designhome.description3?.split(".").map((sentence, index) => {
+                          console.log(sentence);
+                          return (
+                            <div key={index} dangerouslySetInnerHTML={{ __html: sentence }}></div>
+                            // <React.Fragment key={index}>
+                            //   {index > 0} {/* Thêm dấu chấm (.) trước câu từ thứ hai trở đi */}
+                            //   {sentence}
+                            //   <br /> {/* Xuống dòng sau mỗi câu */}
+                            // </React.Fragment>
+                          );
+                        })}
 
                         {/* <li>Chương trình dành cho tất cả sinh viên đang học tại FPTU HCMC.</li>
                         <li>Sinh viên bình chọn cho giảng viên yêu thích.</li>

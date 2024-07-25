@@ -571,7 +571,7 @@ export const CheckVoter = (userId, campaignid, token) => {
       dispatch(
         createAction({
           type: PathAction.CHECK_VOTER,
-          payload: err.response.data?.success,
+          payload: err.response.data ? err.response.data.success : false,
         })
       );
     }

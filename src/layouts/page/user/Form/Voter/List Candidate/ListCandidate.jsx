@@ -118,7 +118,7 @@ export default function ListCandidate() {
       },
     ];
     for (var i = 0; i < listGroup.length; i++) {
-      if (listGroup[i].description.includes("NC")) {
+      if (listGroup[i].description === "NC") {
         GroupOption.push({
           id: listGroup[i].name,
           title: listGroup[i].name,
@@ -336,7 +336,7 @@ export default function ListCandidate() {
   useEffect(() => {
     const callAPIgetList = async () => {
       if (listIdArray !== null) {
-        dispatch(CheckVoter(decode.Username, idCampainStore, token));
+        dispatch(CheckVoter(decode.Username || decode.userId, idCampainStore, token));
       }
     };
     callAPIgetList();

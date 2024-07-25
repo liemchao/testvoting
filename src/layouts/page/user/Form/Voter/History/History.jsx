@@ -107,7 +107,7 @@ export default function HistoryUser() {
 
   React.useEffect(() => {
     const callAPI = async () => {
-      await dispatch(callAPIgetListHistory(decode.Username, token));
+      await dispatch(callAPIgetListHistory(decode.Username || decode.userId, token));
     };
     callAPI();
   }, [dispatch, token]);

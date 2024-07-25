@@ -145,13 +145,16 @@ export default function Section3() {
                         textIndent: isMobile ? "-1.5rem" : "0.3rem",
                       }}
                     >
-                      {designhome.description4?.split(".").map((sentence, index) => (
-                        <React.Fragment key={index}>
-                          {index > 0} {/* Thêm dấu chấm (.) trước câu từ thứ hai trở đi */}
-                          {sentence}
-                          <br /> {/* Xuống dòng sau mỗi câu */}
-                        </React.Fragment>
-                      ))}
+                      {designhome.description4?.split(".").map((sentence, index) => {
+                        console.log(sentence);
+                        return (
+                          <React.Fragment>
+                            {index > 0} {/* Thêm dấu chấm (.) trước câu từ thứ hai trở đi */}
+                            {sentence}
+                            <br /> {/* Xuống dòng sau mỗi câu */}
+                          </React.Fragment>
+                        );
+                      })}
 
                       {/* <li>
                         Top 10 giảng viên đạt danh hiệu{" "}

@@ -40,7 +40,7 @@ export default function FeedbackBubble(props) {
 
     const feedbackData = {
       content: rating,
-      userId: decode.Username,
+      userId: decode.Username || decode.userId,
       campaignId: idCampainStore,
     };
 
