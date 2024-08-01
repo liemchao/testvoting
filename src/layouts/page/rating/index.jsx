@@ -412,7 +412,7 @@ const TopAndTable = () => {
           sx={{
             height: "100%",
             border: "2px solid orange ",
-            padding: "16px",
+            paddingBottom: "50px",
             display: "flex",
             borderRadius: 10,
             flexDirection: "column",
@@ -438,7 +438,7 @@ const TopAndTable = () => {
           sx={{
             height: "100%",
             border: "2px solid orange",
-            padding: "16px",
+            padding: "20px",
             borderRadius: 10,
             display: "flex",
             flexDirection: "column",

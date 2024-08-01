@@ -118,7 +118,7 @@ export default function ListCandidate() {
       },
     ];
     for (var i = 0; i < listGroup.length; i++) {
-      if (listGroup[i].description === "NC") {
+      if (listGroup[i].description.includes("NC")) {
         GroupOption.push({
           id: listGroup[i].name,
           title: listGroup[i].name,

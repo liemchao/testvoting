@@ -47,6 +47,7 @@ import ModerCampaignByID from "layouts/page/rating/ModeratorMana";
 import FeedbackOwer from "layouts/page/user/icontop/FeebackOwner";
 import Results from "layouts/page/admin/mangerCampain/detail/Results";
 import Test from "layouts/page/user/Campaign/test";
+import SildeTop10 from "layouts/page/sildetop10";
 
 //----------------------------------------------------------------
 
@@ -61,7 +62,7 @@ export default function Router() {
       } else if (token && !decoded.RoleName) {
         return <SigninPoppop OpenPopUp={open} SetOpenPopUp={setOpen} />;
       } else if (roles.includes(decoded.RoleName)) {
-        return <>{children}</>;
+        return <> {children} </>;
       }
     } catch (error) {
       return <SigninPoppop OpenPopUp={open} SetOpenPopUp={setOpen} />;
@@ -135,6 +136,10 @@ export default function Router() {
         {
           path: "form",
           element: <ListForm />,
+        },
+        {
+          path: "silde10top",
+          element: <SildeTop10 />,
         },
         {
           path: "feebackOwer/:id",
@@ -220,7 +225,7 @@ export default function Router() {
 
         {
           path: "result/:id",
-          element: <TopAndTable />
+          element: <TopAndTable />,
         },
         {
           path: "candidate/:id",
