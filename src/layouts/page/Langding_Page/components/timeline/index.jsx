@@ -1,6 +1,6 @@
 import * as React from "react";
 import Stack from "@mui/material/Stack";
-import Imagetimeline from "assets/images/Moc thoi gian - timeline.png";
+import Imagetimeline from "assets/images/MỐC.png";
 import { Typography } from "@mui/joy";
 import { useSelector } from "react-redux";
 
@@ -9,18 +9,22 @@ export default function CustomizedSteppers() {
     return state.design;
   });
   return (
-    <Stack sx={{ width: "100%" }} spacing={4}>
-      <div style={{ position: "relative", display: "inline-block" }}>
-        <img src={Imagetimeline} alt="Timeline" />
+    <Stack sx={{ width: "100%" }} spacing={2}>
+      <div style={{ position: "relative", display: "inline-block", marginTop: "-6rem" }}>
+        <img
+          style={{ paddingLeft: "10%", paddingRight: "7%", width: "90%" }}
+          src={Imagetimeline}
+          alt="Timeline"
+        />
         <Typography
           variant="body1"
           sx={{
             position: "absolute",
-            bottom: "-10%",
-            left: "10%",
+            bottom: "10%",
+            left: "10.5%",
             color: design.textColor,
             fontFamily: "UTM Swiss Condensed Regular",
-            fontSize: 30,
+            fontSize: 17,
             "@media (max-width: 600px)": {
               fontSize: "14px",
               bottom: "-40%",
@@ -28,15 +32,14 @@ export default function CustomizedSteppers() {
             },
           }}
         >
-          Mở cổng <br />
-          bình chọn
+          Mở cổng bình chọn
         </Typography>
         <Typography
           variant="h4"
           fontWeight="bold"
           sx={{
             position: "absolute",
-            bottom: "30%",
+            bottom: "15%",
             left: "10%",
             color: design.textColor,
             fontFamily: "UTM Swiss Condensed Regular",
@@ -50,16 +53,15 @@ export default function CustomizedSteppers() {
         >
           {design.time1}
         </Typography>
-
         <Typography
           variant="body1"
           sx={{
             position: "absolute",
-            bottom: "-4%",
-            left: "32%",
+            bottom: "51%",
+            left: "28.5%",
             color: design.textColor,
             fontFamily: "UTM Swiss Condensed Regular",
-            fontSize: 30,
+            fontSize: 16,
             "@media (max-width: 600px)": {
               fontSize: "14px",
               bottom: "-32%",
@@ -67,16 +69,15 @@ export default function CustomizedSteppers() {
             },
           }}
         >
-          Đóng cổng
-          <br /> bình chọn
+          Đóng cổng bình chọn
         </Typography>
         <Typography
           variant="h4"
           fontWeight="bold"
           sx={{
             position: "absolute",
-            bottom: "35%",
-            left: "30%",
+            bottom: "55%",
+            left: "28%",
             color: design.textColor,
             fontFamily: "UTM Swiss Condensed Regular",
             fontSize: 30,
@@ -89,16 +90,15 @@ export default function CustomizedSteppers() {
         >
           {design.time2}
         </Typography>
-
         <Typography
           variant="body1"
           sx={{
             position: "absolute",
-            bottom: "16%",
-            left: "54%",
+            bottom: "-9%",
+            left: "49%",
             color: design.textColor,
             fontFamily: "UTM Swiss Condensed Regular",
-            fontSize: 30,
+            fontSize: 17,
             "@media (max-width: 600px)": {
               fontSize: "14px",
               bottom: "-20%",
@@ -106,15 +106,15 @@ export default function CustomizedSteppers() {
             },
           }}
         >
-          Công bố <br /> TOP 10
+          Công bố TOP 10
         </Typography>
         <Typography
           variant="h4"
           fontWeight="bold"
           sx={{
             position: "absolute",
-            bottom: "60%",
-            left: "54%",
+            bottom: "-5%",
+            left: "48%",
             color: design.textColor,
             fontFamily: "UTM Swiss Condensed Regular",
             fontSize: 30,
@@ -127,16 +127,15 @@ export default function CustomizedSteppers() {
         >
           {design.time3}
         </Typography>
-
         <Typography
           variant="body1"
           sx={{
             position: "absolute",
-            bottom: "43%",
-            left: "76%",
+            bottom: "39%",
+            left: "73%",
             color: design.textColor,
             fontFamily: "UTM Swiss Condensed Regular",
-            fontSize: 30,
+            fontSize: 17,
             "@media (max-width: 600px)": {
               fontSize: "14px",
               bottom: "10%",
@@ -144,16 +143,15 @@ export default function CustomizedSteppers() {
             },
           }}
         >
-          Vinh danh
-          <br /> TOP 10
+          Vinh danh TOP 10
         </Typography>
         <Typography
           variant="h4"
           fontWeight="bold"
           sx={{
             position: "absolute",
-            bottom: "80%",
-            left: "76%",
+            bottom: "43%",
+            left: "72%",
             color: design.textColor,
             fontFamily: "UTM Swiss Condensed Regular",
             fontSize: 30,

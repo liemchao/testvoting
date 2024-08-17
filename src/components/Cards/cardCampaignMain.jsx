@@ -74,11 +74,11 @@ export default function MainCard(props) {
           },
         }}
       />
-
       <Card
         orientation="horizontal"
         sx={{
-          width: "97%",
+          marginTop: "2%",
+          width: "95%",
           flexWrap: "wrap",
           [`& > *`]: {
             "--stack-point": "500px",
@@ -91,14 +91,14 @@ export default function MainCard(props) {
           backgroundColor: "transparent", // Đặt màu nền của card là trong suốt
           boxShadow: "none",
 
-          backgroundImage: `url("https://i.imgur.com/dqFqy9W.png")`,
+          backgroundImage: `url("https://res.cloudinary.com/ddrq4bfkk/image/upload/f_auto,q_auto/v1/2024/sjwd61p3aomt6edqu6sf")`,
           backgroundSize: "100% 100%",
         }}
       >
         <CardContent>
           {/* <Typography level="body1" fontWeight="lg" textColor="text.tertiary">
-              {creater}
-            </Typography> */}
+                                      {creater}
+                                    </Typography> */}{" "}
           <Sheet
             sx={{
               borderRadius: "sm",
@@ -128,7 +128,6 @@ export default function MainCard(props) {
               >
                 ‟
               </Typography>
-
               <Typography
                 level="body"
                 fontWeight="normal"
@@ -141,11 +140,11 @@ export default function MainCard(props) {
                   textAlign: "center", // Căn giữa nội dung
                 }}
               >
-                {description}
-                {/* Danh hiệu <strong>Inspiring Instructor Awards 2023</strong> nhằm tôn vinh những nỗ
+                {/* {description} */}
+                Danh hiệu <strong>Inspiring Instructor Awards 2024</strong> nhằm tôn vinh những nỗ
                 lực, cống hiến của Giảng viên trong hành trình định hướng, giúp đỡ sinh viên thu
                 nhận kiến thức và truyền cảm hứng đến sinh viên <strong>FPTU HCMC</strong> trong 3
-                học kỳ: <strong>Fall 2022, Spring 2023 và Summer 2023.</strong> */}
+                học kỳ: <strong>Fall 2024, Spring 2024 và Summer 2024.</strong>
               </Typography>
               <Box
                 sx={{
@@ -157,15 +156,6 @@ export default function MainCard(props) {
                   transform: "translateX(-50%)",
                 }}
               >
-                <ButtonLangding
-                  height={isMobile ? "3.5rem" : "3.5rem"}
-                  width={isMobile ? "8rem" : "12rem"}
-                  nameButton="CHIA SẺ"
-                  bgColor={design.textColor}
-                  onClick={onClickShare}
-                  borderRadius={"50px"}
-                  disabled={process === "Đã kết thúc"}
-                />
                 {process === "Đã kết thúc" ? (
                   <ButtonLangding
                     nameButton="TOP 10"
@@ -188,6 +178,15 @@ export default function MainCard(props) {
                     borderRadius={"50px"}
                   />
                 )}
+                <ButtonLangding
+                  height={isMobile ? "3.5rem" : "3.5rem"}
+                  width={isMobile ? "8rem" : "12rem"}
+                  nameButton="CHIA SẺ"
+                  bgColor={design.textColor}
+                  onClick={onClickShare}
+                  borderRadius={"50px"}
+                  disabled={process === "Đã kết thúc"}
+                />
               </Box>
               <div style={{ visibility: "hidden" }}>
                 <ButtonLangding

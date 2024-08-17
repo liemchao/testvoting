@@ -14,9 +14,9 @@ import PromotionCarousel from "./components/campaign";
 import MyTimeline from "./components/timeline";
 import CountdownTimer from "./components/timecount";
 import VotingRules from "./components/rules";
-import ImageThele from "../../../assets/images/The le tham gia.png";
-import ImageMocTime from "../../../assets/images/Moc thoi gian.png";
-import ImageTimeCount from "../../../assets/images/Thoi gian con lai.png";
+import ImageThele from "../../../assets/images/THỂ LỆ THAM GIA.png";
+import ImageMocTime from "../../../assets/images/MỐC THỜI GIAN.png";
+import ImageTimeCount from "../../../assets/images/THỜI GIAN CÒN LẠI.png";
 import ImageCampaign from "../../../assets/images/Chien dich dang dien ra.png";
 import { useTheme, useMediaQuery } from "@mui/material";
 import { Link } from "react-scroll";
@@ -96,6 +96,7 @@ export default function LangdingPage() {
 
             <ScrollToTopButtonTop />
           </Box>
+          <Box display="flex" justifyContent="center" sx={{ p: 10, visibility: "hidden" }}></Box>
 
           {/* <Box display="flex" justifyContent="center" sx={{ p: 4 }}>
               <Typography variant="h2">Ứng cử viên</Typography>
@@ -106,32 +107,38 @@ export default function LangdingPage() {
             <SearchBox /> */}
           <Box
             id="section2"
+            display="flex"
+            justifyContent="center"
+            sx={{ p: 1, marginTop: "-11rem" }}
+          >
+            <img style={{ width: isMobile ? "80%" : "40%" }} src={ImageThele}></img>
+          </Box>
+          <VotingRules />
+          <Box display="flex" justifyContent="center" sx={{ p: 10, visibility: "hidden" }}></Box>
+
+          <Box
+            id="section3"
             sx={{
-              backgroundImage: `url("https://res.cloudinary.com/dxevluwyr/image/upload/v1694590664/bg1_culbrm.png")`,
+              // backgroundImage: `url("https://res.cloudinary.com/ddrq4bfkk/image/upload/f_auto,q_auto/v1/2024/sjwd61p3aomt6edqu6sf")`,
               backgroundSize: "100% 100%",
-              mt: isMobile ? -24 : 5,
+              mt: isMobile ? -24 : -2,
             }}
           >
-            <Box display="flex" justifyContent="center" sx={{ p: 1, mt: 5 }}>
+            <Box display="flex" justifyContent="center" sx={{ p: 1, mt: "-1%" }}>
               <img style={{ width: isMobile ? "70%" : "40%" }} src={ImageMocTime}></img>
             </Box>
             <MyTimeline />
-            <Box display="flex" justifyContent="center" sx={{ p: 2, visibility: "hidden" }}>
-              <img src={ImageMocTime}></img>
-            </Box>
           </Box>
-          <Box id="section3" display="flex" justifyContent="center" sx={{ p: 2 }}>
-            <img style={{ width: isMobile ? "80%" : "50%" }} src={ImageThele}></img>
-          </Box>
-          <VotingRules />
+          <Box display="flex" justifyContent="center" sx={{ p: 10, visibility: "hidden" }}></Box>
+
           <Box
             sx={{
-              backgroundImage: `url("https://res.cloudinary.com/dxevluwyr/image/upload/v1694590664/bg1_culbrm.png")`,
+              // backgroundImage: `url("https://res.cloudinary.com/ddrq4bfkk/image/upload/f_auto,q_auto/v1/2024/sjwd61p3aomt6edqu6sf")`,
               backgroundSize: "100% 100%",
             }}
           >
             <Box id="section4" display="flex" justifyContent="center" sx={{ p: 2, mt: 5 }}>
-              <img src={ImageTimeCount}></img>
+              <img style={{ width: isMobile ? "80%" : "37%" }} src={ImageTimeCount}></img>
             </Box>
             <CountdownTimer />
             <Box display="flex" justifyContent="center" sx={{ p: 2, visibility: "hidden" }}>

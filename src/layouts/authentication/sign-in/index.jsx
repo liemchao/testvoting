@@ -103,21 +103,12 @@ export default function SignInSide() {
             }}
           >
             <img
-              src={logo}
-              alt="Logo"
-              style={{
-                width: isMobile ? "45%" : "45%", // Để hình ảnh lấp đầy chiều rộng của container
-                height: "auto",
-                marginLeft: "1%",
-              }}
-            />
-            <img
               src={design.icon}
               alt="Logo"
               style={{
-                width: isMobile ? "45%" : "45%", // Để hình ảnh lấp đầy chiều rộng của container
+                width: isMobile ? "70%" : "85%", // Để hình ảnh lấp đầy chiều rộng của container
                 height: "auto",
-                marginLeft: "5%",
+                marginRight: "7%",
               }}
             />
           </Box>
@@ -128,7 +119,7 @@ export default function SignInSide() {
               p: 3,
               display: "flex",
               backgroundImage:
-                "url( https://res.cloudinary.com/dxevluwyr/image/upload/v1694590153/bg_hewbvg.png)",
+                "url(https://res.cloudinary.com/ddrq4bfkk/image/upload/f_auto,q_auto/v1/2024/sjwd61p3aomt6edqu6sf)",
               flexDirection: "column",
               alignItems: "center",
               borderRadius: "10px",
@@ -158,7 +149,7 @@ export default function SignInSide() {
               component="form"
               noValidate
               onSubmit={formik.handleSubmit}
-              sx={{ marginTop: "-3rem" }}
+              sx={{ marginTop: "-1rem" }}
             >
               <TextField
                 margin="normal"
@@ -175,9 +166,38 @@ export default function SignInSide() {
                 helperText={formik.touched.userName && formik.errors.userName}
                 onBlur={formik.handleBlur}
                 sx={{
+                  "& label": {
+                    color: "white",
+                  },
+                  "& label.Mui-focused": {
+                    color: "white",
+                  },
+                  "& .MuiInput-underline:after": {
+                    borderBottomColor: "white",
+                  },
+                  "& .MuiOutlinedInput-root": {
+                    "& fieldset": {
+                      borderColor: "white",
+                    },
+                    "&:hover fieldset": {
+                      borderColor: "white",
+                    },
+                    "&.Mui-focused fieldset": {
+                      borderColor: "white",
+                    },
+                    "& input": {
+                      color: "white",
+                    },
+                    "&::placeholder": {
+                      color: "white",
+                    },
+                    "&.Mui-focused input": {
+                      color: "white",
+                    },
+                  },
                   [defaultTheme.breakpoints.down("sm")]: {
                     marginBottom: "1rem",
-                    marginLeft: "1rem", // Kiểu cho màn hình nhỏ hơn "sm"
+                    marginLeft: "1rem",
                   },
                 }}
               />
@@ -194,7 +214,19 @@ export default function SignInSide() {
                   endAdornment: (
                     <InputAdornment position="end">
                       <IconButton onClick={handleTogglePassword} edge="end">
-                        {showPassword ? <VisibilityIcon /> : <VisibilityOffIcon />}
+                        {showPassword ? (
+                          <VisibilityIcon
+                            sx={{
+                              color: "white", // Đổi màu icon sang trắng
+                            }}
+                          />
+                        ) : (
+                          <VisibilityOffIcon
+                            sx={{
+                              color: "white", // Đổi màu icon sang trắng
+                            }}
+                          />
+                        )}
                       </IconButton>
                     </InputAdornment>
                   ),
@@ -205,6 +237,35 @@ export default function SignInSide() {
                 helperText={formik.touched.password && formik.errors.password}
                 onBlur={formik.handleBlur}
                 sx={{
+                  "& label": {
+                    color: "white",
+                  },
+                  "& label.Mui-focused": {
+                    color: "white",
+                  },
+                  "& .MuiInput-underline:after": {
+                    borderBottomColor: "white",
+                  },
+                  "& .MuiOutlinedInput-root": {
+                    "& fieldset": {
+                      borderColor: "white",
+                    },
+                    "&:hover fieldset": {
+                      borderColor: "white",
+                    },
+                    "&.Mui-focused fieldset": {
+                      borderColor: "white",
+                    },
+                    "& input": {
+                      color: "white",
+                    },
+                    "&::placeholder": {
+                      color: "white",
+                    },
+                    "&.Mui-focused input": {
+                      color: "white",
+                    },
+                  },
                   [defaultTheme.breakpoints.down("sm")]: {
                     marginBottom: "1rem",
                     marginLeft: "1rem", // Kiểu cho màn hình nhỏ hơn "sm"
@@ -223,21 +284,27 @@ export default function SignInSide() {
                   }}
                 >
                   <FormControlLabel
+                    sx={{
+                      color: "white", // Đổi màu checkbox sang trắng
+                      "&.Mui-checked": {
+                        color: "white", // Đổi màu checkbox khi được chọn sang trắng
+                      },
+                    }}
                     control={
                       <Checkbox
                         value="remember"
-                        color="primary"
+                        sx={{
+                          color: "white", // Đổi màu checkbox sang trắng
+                          "&.Mui-checked": {
+                            color: "white", // Đổi màu checkbox khi được chọn sang trắng
+                          },
+                        }}
                         checked={rememberMe}
                         onChange={() => setRememberMe(!rememberMe)}
                       />
                     }
                     label="Ghi nhớ tài khoản"
                   />
-                </Grid>
-                <Grid item mt={1}>
-                  {/* <Link to="/resetpassword" variant="body1">
-                    Bạn quên mật khẩu?
-                  </Link> */}
                 </Grid>
               </Grid>
               <Grid
@@ -251,7 +318,7 @@ export default function SignInSide() {
                     marginLeft: "1rem", // Kiểu cho màn hình nhỏ hơn "sm"
                   },
                 }}
-                mt={"2%"}
+                mt={"3%"}
               >
                 <ButtonLangding
                   type="submit"
@@ -291,7 +358,7 @@ export default function SignInSide() {
                   onClick={hanldeLoginWithgg}
                 />
               </Grid>
-              <Copyright sx={{ mt: 10, visibility: "hidden" }} />
+              <Copyright sx={{ mt: 2, visibility: "hidden" }} />
             </Box>
           </Box>
         </Grid>

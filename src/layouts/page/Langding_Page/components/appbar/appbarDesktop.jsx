@@ -63,12 +63,17 @@ export default function AppbarDesktop({ matches }) {
       {/* <AppbarHeader color="white" variant="h3">
         bình chọn{" "}
       </AppbarHeader> */}
-      <MyList type="row" sx={{ marginLeft: "-30rem" }}>
-        <img src={Logo} alt="Logo" style={{ width: "130px", height: "auto" }} />
+      <MyList type="row" sx={{ display: "flex", alignItems: "center", marginTop: "1.5%" }}>
         <img
           src={design.icon}
           alt="Logo"
-          style={{ width: "110px", marginLeft: "1rem", height: "auto" }}
+          style={{
+            width: "70%",
+            height: "auto",
+            position: "absolute",
+            left: 0,
+            transform: "translateX(0)",
+          }}
         />
       </MyList>
       {token ? (

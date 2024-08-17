@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
     bottom: theme.spacing(2),
     right: theme.spacing(2),
     color: "white",
-    background: "linear-gradient(to right, #d44fac, #890761)",
+    background: "linear-gradient(to right,#005F8A, #061949)",
   },
 }));
 

@@ -36,14 +36,16 @@ export default function Section3() {
           justifyContent="center"
           alignItems="center"
           flexDirection={{ xs: "column", sm: "row" }} // Flex direction sẽ thay đổi khi trên web hoặc mobile
-          style={{ width: "100%" }}
+          style={{ width: "100%", border: "2px solid white", borderRadius: "20px" }}
         >
           <img
-            src={designhome.logo4}
+            src="https://res.cloudinary.com/ddrq4bfkk/image/upload/f_auto,q_auto/v1/2024/mfejvdv2dtpkzhy2mg3w"
+            // src={designhome.logo4}
             alt="Logo"
             style={{
               width: isMobile ? "15rem" : "30rem",
               marginRight: "9.2rem",
+              marginTop: "2%",
               height: "auto",
               marginLeft: isMobile ? "40%" : "3%",
             }}
@@ -99,7 +101,7 @@ export default function Section3() {
                 position: "relative", // Thêm thuộc tính position: "relative"
                 backgroundColor: "transparent", // Đặt màu nền của card là trong suốt
                 boxShadow: "none",
-                backgroundImage: `url("https://i.imgur.com/dqFqy9W.png")`,
+
                 backgroundSize: "100% 100%",
               }}
             >
@@ -142,19 +144,27 @@ export default function Section3() {
                         // Đặt font chữ tùy chỉnh
                         marginTop: isMobile ? "0.3rem" : "0rem",
                         textAlign: "start", // Căn giữa nội dung
-                        textIndent: isMobile ? "-1.5rem" : "0.3rem",
+                        textIndent: isMobile ? "-1.5rem" : "0.1rem",
                       }}
                     >
-                      {designhome.description4?.split(".").map((sentence, index) => {
+                      <li>
+                        Top 10 giảng viên đạt danh hiệu{" "}
+                        <strong>"Inspiring Instructor Awards"</strong> sẽ được vinh danh trong buổi
+                        lễ trang trọng tại Đại học FPT campus Thành phố Hồ Chí Minh.
+                      </li>
+                      <li>
+                        Trao tặng<strong> bộ quà tặng danh riêng cho danh hiệu này.</strong>
+                      </li>
+                      {/* {designhome.description4?.split(".").map((sentence, index) => {
                         console.log(sentence);
                         return (
                           <React.Fragment>
-                            {index > 0} {/* Thêm dấu chấm (.) trước câu từ thứ hai trở đi */}
+                            {index > 0} 
                             {sentence}
-                            <br /> {/* Xuống dòng sau mỗi câu */}
+                            <br /> 
                           </React.Fragment>
                         );
-                      })}
+                      })} */}
 
                       {/* <li>
                         Top 10 giảng viên đạt danh hiệu{" "}

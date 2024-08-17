@@ -16,7 +16,7 @@ const VotingRules = () => {
     return state.design;
   });
   return (
-    <Container>
+    <Container sx={{ marginTop: "-5rem" }}>
       <Grid container spacing={2}>
         <Grid item xs={12}>
           <Box
@@ -27,7 +27,7 @@ const VotingRules = () => {
             }}
           >
             <Typography
-              variant="h4"
+              variant="h5"
               fontWeight="bold"
               sx={{
                 color: design.textColor,
@@ -41,7 +41,7 @@ const VotingRules = () => {
               Quy tắc bình chọn:
             </Typography>
             <Typography
-              variant="h5"
+              variant="h6"
               sx={{
                 color: design.textColor,
                 fontFamily: "UTM Swiss Condensed Regular", // Đặt font chữ tùy chỉnh
@@ -54,7 +54,7 @@ const VotingRules = () => {
               1 sinh viên có 1 lần tham gia với 3 phiếu bình chọn.
             </Typography>
             <Typography
-              variant="h5"
+              variant="h6"
               sx={{
                 color: design.textColor,
                 fontFamily: "'UTM Swiss Condensed Regular'", // Đặt font chữ tùy chỉnh
@@ -67,7 +67,7 @@ const VotingRules = () => {
               1 lượt bình chọn dành cho 1 giảng viên.
             </Typography>
             <Typography
-              variant="h5"
+              variant="h6"
               fontWeight="bold"
               fontStyle={"italic"}
               sx={{
@@ -84,7 +84,12 @@ const VotingRules = () => {
             <Grid
               container
               spacing={3}
-              sx={{ backgroundColor: "transparent", position: "relative", border: "none" }}
+              sx={{
+                backgroundColor: "transparent",
+                position: "relative",
+                border: "none",
+                marginTop: "-1rem",
+              }}
             >
               <Grid
                 item
@@ -101,7 +106,7 @@ const VotingRules = () => {
                 <Card
                   sx={{
                     backgroundColor: "transparent",
-                    backgroundImage: `url("https://i.imgur.com/dqFqy9W.png")`,
+                    backgroundImage: `url("https://res.cloudinary.com/ddrq4bfkk/image/upload/f_auto,q_auto/v1/2024/sjwd61p3aomt6edqu6sf")`,
                     backgroundSize: "100% 100%",
                     border: "none",
                   }}
@@ -138,7 +143,7 @@ const VotingRules = () => {
                       <Grid item>
                         <FavoriteIcon
                           sx={{
-                            color: "red",
+                            color: "#005F8A",
                             fontSize: 30,
                             "@media (max-width: 600px)": {
                               fontSize: "1.2rem",
@@ -150,7 +155,7 @@ const VotingRules = () => {
                       <Grid item>
                         <FavoriteIcon
                           sx={{
-                            color: "red",
+                            color: "#005F8A",
                             fontSize: 30,
                             "@media (max-width: 600px)": {
                               fontSize: "1.2rem",
@@ -162,7 +167,7 @@ const VotingRules = () => {
                       <Grid item>
                         <FavoriteIcon
                           sx={{
-                            color: "red",
+                            color: "#005F8A",
                             fontSize: 30,
                             "@media (max-width: 600px)": {
                               fontSize: "1.2rem",
@@ -218,7 +223,7 @@ const VotingRules = () => {
                 <Card
                   sx={{
                     backgroundColor: "transparent",
-                    backgroundImage: `url("https://i.imgur.com/dqFqy9W.png")`,
+                    backgroundImage: `url("https://res.cloudinary.com/ddrq4bfkk/image/upload/f_auto,q_auto/v1/2024/sjwd61p3aomt6edqu6sf")`,
                     backgroundSize: "100% 100%",
                   }}
                 >
@@ -250,7 +255,6 @@ const VotingRules = () => {
                     >
                       CHUYÊN NGÀNH
                     </Typography>
-
                     <Typography
                       variant="body"
                       fontWeight="bold"
@@ -263,13 +267,13 @@ const VotingRules = () => {
                         },
                       }}
                     >
-                      (HK1-HK6)
+                      (HK1 - HK6)
                     </Typography>
                     <Grid sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
                       <Grid item>
                         <FavoriteIcon
                           sx={{
-                            color: "red",
+                            color: "#005F8A",
                             fontSize: 30,
                             "@media (max-width: 600px)": {
                               fontSize: "1.2rem",
@@ -310,7 +314,7 @@ const VotingRules = () => {
                       <Grid item>
                         <FavoriteIcon
                           sx={{
-                            color: "red",
+                            color: "#005F8A",
                             fontSize: 30,
                             "@media (max-width: 600px)": {
                               fontSize: "1.2rem",
@@ -322,7 +326,7 @@ const VotingRules = () => {
                       <Grid item>
                         <FavoriteIcon
                           sx={{
-                            color: "red",
+                            color: "#005F8A",
                             fontSize: 30,
                             "@media (max-width: 600px)": {
                               fontSize: "1.2rem",
@@ -393,7 +397,7 @@ const VotingRules = () => {
                 <Card
                   sx={{
                     backgroundColor: "transparent",
-                    backgroundImage: `url("https://i.imgur.com/dqFqy9W.png")`,
+                    backgroundImage: `url("https://res.cloudinary.com/ddrq4bfkk/image/upload/f_auto,q_auto/v1/2024/sjwd61p3aomt6edqu6sf")`,
                     backgroundSize: "100% 100%",
                   }}
                 >
@@ -437,13 +441,13 @@ const VotingRules = () => {
                         },
                       }}
                     >
-                      (HK7-HK9)
+                      (HK7 - HK9)
                     </Typography>
                     <Grid sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
                       <Grid item>
                         <FavoriteIcon
                           sx={{
-                            color: "red",
+                            color: "#005F8A",
                             fontSize: 30,
                             "@media (max-width: 600px)": {
                               fontSize: "1.2rem",
@@ -455,7 +459,7 @@ const VotingRules = () => {
                       <Grid item>
                         <FavoriteIcon
                           sx={{
-                            color: "red",
+                            color: "#005F8A",
                             fontSize: 30,
                             "@media (max-width: 600px)": {
                               fontSize: "1.2rem",
@@ -467,7 +471,7 @@ const VotingRules = () => {
                       <Grid item>
                         <FavoriteIcon
                           sx={{
-                            color: "red",
+                            color: "#005F8A",
                             fontSize: 30,
                             "@media (max-width: 600px)": {
                               fontSize: "1.2rem",

@@ -11,6 +11,7 @@ import { useMediaQuery } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import { getDesiginHome } from "context/redux/action/action";
 import React, { useEffect } from "react";
+import { border, borderRadius, padding } from "polished";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -58,6 +59,9 @@ export default function MyComponent() {
       {isMobile ? (
         <>
           <Box
+            // style={{
+            //   backgroundImage: `url("https://res.cloudinary.com/ddrq4bfkk/image/upload/f_auto,q_auto/v1/2024/sjwd61p3aomt6edqu6sf")`,
+            // }}
             display="flex"
             flexDirection={isMobile ? "column" : "row"} // Adjust the flexDirection based on screen size
             mt={isMobile ? "-4rem" : "-6rem"} // Adjust the margin top based on screen size
@@ -127,7 +131,6 @@ export default function MyComponent() {
                   boxShadow: "none",
                   marginLeft: "2%",
 
-                  backgroundImage: `url("https://i.imgur.com/dqFqy9W.png")`,
                   backgroundSize: "100% 100%",
                 }}
               >
@@ -173,7 +176,11 @@ export default function MyComponent() {
                           textAlign: "start", // Căn giữa nội dung
                         }}
                       >
-                        {designhome.description1}
+                        {/* {designhome.description1} */}
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at magna
+                        non nunc tristique rhoncus. Aliquam nibh ante, egestas id dictum a, commodo
+                        luctus libero. Praesent faucibus malesuada faucibus. Donec laoreet metus id
+                        laoreet malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       </Typography>
                       <Box
                         sx={{
@@ -210,7 +217,10 @@ export default function MyComponent() {
             mt={isMobile ? "-6rem" : "-6rem"} // Adjust the margin top based on screen size
             justifyContent="center"
             alignItems={isMobile ? "initial" : "center"} // Adjust the alignItems based on screen size
-            style={{ width: "100%" }}
+            style={{
+              border: "2px solid white",
+              borderRadius: "20px",
+            }}
           >
             <Box
               sx={{
@@ -263,8 +273,6 @@ export default function MyComponent() {
                   backgroundColor: "transparent", // Đặt màu nền của card là trong suốt
                   boxShadow: "none",
                   marginLeft: "2%",
-
-                  backgroundImage: `url("https://i.imgur.com/dqFqy9W.png")`,
                   backgroundSize: "100% 100%",
                 }}
               >
@@ -310,13 +318,24 @@ export default function MyComponent() {
                           textAlign: "start", // Căn giữa nội dung
                         }}
                       >
-                        {designhome.description1?.split(".").map((sentence, index) => (
+                        <li>
+                          Danh hiệu <strong>"Inspiring Instructor Awards"</strong> nhằm tôn vinh
+                          những nỗ lực, cống hiến của Giảng viên trong hành trình trao truyền kiến
+                          thức và cảm hứng đến sinh viên
+                          <strong> FPTU HCMC.</strong>
+                        </li>
+                        <li>
+                          Đây là danh hiệu được bình chọn định kỳ hằng năm và dành cho tất cả giảng
+                          viên dạy ở 3 học kì gần nhất của thời điểm đó:
+                          <strong> Fall, Spring, Summer.</strong>
+                        </li>
+                        {/* {designhome.description1?.split(".").map((sentence, index) => (
                           <React.Fragment key={index}>
-                            {index > 0} {/* Thêm dấu chấm (.) trước câu từ thứ hai trở đi */}
+                            {index > 0} 
                             {sentence}
-                            <br /> {/* Xuống dòng sau mỗi câu */}
+                            <br /> 
                           </React.Fragment>
-                        ))}
+                        ))} */}
                       </Typography>
                       <Box
                         sx={{
@@ -344,10 +363,12 @@ export default function MyComponent() {
               </Card>
             </Box>
             <img
-              src={designhome.logo1}
+              src="https://res.cloudinary.com/ddrq4bfkk/image/upload/f_auto,q_auto/v1/2024/pgdhzmxv9v4bycophxys"
+              // {designhome.logo1}
               alt="Logo"
               style={{
-                width: isMobile ? "15rem" : "30rem",
+                marginTop: "-1rem",
+                width: isMobile ? "15rem" : "31rem",
                 marginRight: "9.2rem",
                 height: "auto",
                 marginLeft: isMobile ? "15%" : "3%",

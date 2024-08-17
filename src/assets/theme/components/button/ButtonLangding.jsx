@@ -37,16 +37,20 @@ export default function ButtonLangding(props) {
   });
   const ColorButton = styled(Button)(({ theme }) => ({
     // color: theme.palette.getContrastText("#ffff"),
-    backgroundColor: "transparent",
+
+    backgroundImage: "linear-gradient(to right,#005F8A, #061949)",
+    // background: "linear-gradient(to right,#005F8A, #061949)",
     "&:hover": {
-      background: "linear-gradient(to right, #d44fac, #890761)",
+      background: "linear-gradient(to right, #000000, #0007EF)",
       color: "white",
     },
     display: "center",
     textTransform: "none",
-    fontSize: isMobile ? "15px" : "25px",
+    fontSize: isMobile ? "15px" : "23px",
     color: design.textColor,
-    border: "1px solid #d44fac",
+    borderTop: "1px solid #FFFFFE",
+    borderRight: "1.8px solid #FFFFFE",
+    borderRadius: "60px",
     fontFamily: ["UTM Swiss Condensed Regular"].join(","),
   }));
   return (

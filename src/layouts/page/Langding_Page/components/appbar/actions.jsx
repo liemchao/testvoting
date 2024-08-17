@@ -65,8 +65,8 @@ export default function Actions({ matches }) {
             <ButtonLangding
               width={"10rem"}
               nameButton="Giới thiệu"
-              bgColor="#d44fac"
-              hovercolor="#d44fac"
+              bgColor="#005B82"
+              hovercolor="#0005E4"
               onClick={() => {
                 handleIntroduce();
               }}
@@ -89,8 +89,8 @@ export default function Actions({ matches }) {
             <ButtonLangding
               width={"10rem"}
               nameButton="Đăng nhập"
-              bgColor="#d44fac"
-              hovercolor="#d44fac"
+              bgColor="#005B82"
+              hovercolor="#0005E4"
               onClick={() => {
                 handleLogin();
               }}

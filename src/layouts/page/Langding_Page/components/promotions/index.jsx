@@ -22,9 +22,10 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       flexDirection: "column",
     },
-    marginTop: "5%",
+    marginTop: "2%",
   },
   image: {
+    marginLeft: "5%",
     width: "100%",
     marginBottom: theme.spacing(2),
   },
@@ -76,10 +77,7 @@ export default function Promotions() {
   return (
     <>
       <Grid container className={classes.root}>
-        <Grid item xs={12} md={5}>
-          <img src={campaigns.imgUrl} alt="Logo" className={classes.image} />
-        </Grid>
-        <Grid item xs={12} md={7}>
+        <Grid item xs={12} md={6}>
           <MainCard
             id={campaigns.campaignId}
             creater={campaigns.userId}
@@ -101,6 +99,9 @@ export default function Promotions() {
               handleClickResult(campaigns.campaignId, navigate);
             }}
           />
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <img src={campaigns.imgUrl} alt="Logo" className={classes.image} />
         </Grid>
       </Grid>
       <QRPopUp OpenPopUp={open} SetOpenPopUp={setopen} link={Link} />

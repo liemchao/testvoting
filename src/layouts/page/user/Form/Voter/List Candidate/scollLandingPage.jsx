@@ -9,8 +9,8 @@ const useStyles = makeStyles((theme) => ({
     position: "fixed",
     bottom: "8%",
     right: "48%",
-    color: "#B83490",
-    background: "transparent",
+    color: "white",
+    background: "linear-gradient(to right,#005F8A, #061949)",
   },
 }));
 

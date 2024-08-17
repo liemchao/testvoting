@@ -12,6 +12,7 @@ import { useMediaQuery } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import React, { useEffect } from "react";
 import { getDesiginHome } from "context/redux/action/action";
+import { borderRadius } from "polished";
 
 export default function Section2() {
   const dispatch = useDispatch();
@@ -35,13 +36,18 @@ export default function Section2() {
           justifyContent="center"
           alignItems="center"
           flexDirection={{ xs: "column", sm: "row" }} // Flex direction sẽ thay đổi khi trên web hoặc mobile
-          style={{ width: "100%" }}
+          style={{
+            borderRadius: "20px",
+            border: "2px solid white",
+          }}
         >
           <img
-            src={designhome.logo2}
+            src="https://res.cloudinary.com/ddrq4bfkk/image/upload/f_auto,q_auto/v1/2024/ekxwfu6vkdb8rxv9hhts"
+            // {designhome.logo2}
             alt="Logo"
             style={{
-              width: isMobile ? "15rem" : "30rem",
+              padding: "2rem",
+              width: isMobile ? "15rem" : "40rem",
               marginRight: "9.2rem",
               height: "auto",
               marginLeft: isMobile ? "50%" : "3%",
@@ -98,7 +104,7 @@ export default function Section2() {
                 position: "relative", // Thêm thuộc tính position: "relative"
                 backgroundColor: "transparent", // Đặt màu nền của card là trong suốt
                 boxShadow: "none",
-                backgroundImage: `url("https://i.imgur.com/dqFqy9W.png")`,
+
                 backgroundSize: "100% 100%",
               }}
             >
@@ -142,18 +148,18 @@ export default function Section2() {
                         textAlign: "start", // Căn giữa nội dung
                       }}
                     >
-                      {designhome.description2?.split(".").map((sentence, index) => (
+                      {/* {designhome.description2?.split(".").map((sentence, index) => (
                         <React.Fragment key={index}>
-                          {index > 0} {/* Thêm dấu chấm (.) trước câu từ thứ hai trở đi */}
+                          {index > 0} 
                           {sentence}
-                          <br /> {/* Xuống dòng sau mỗi câu */}
+                          <br /> 
                         </React.Fragment>
-                      ))}
+                      ))} */}
 
-                      {/* <li>Bình chọn</li>
+                      <li>Bình chọn</li>
                       <li>Kết thúc bình chọn</li>
                       <li>Công bố top 10</li>
-                      <li>Vinh danh top 10</li> */}
+                      <li>Vinh danh top 10</li>
                     </Typography>
                     <Box
                       sx={{

@@ -34,6 +34,7 @@ export default function AppDrawer() {
   };
   return (
     <>
+      {" "}
       {drawerOpen && (
         <DrawerCloseButton onClick={() => setDrawerOpen(false)}>
           <CloseIcon
@@ -41,49 +42,47 @@ export default function AppDrawer() {
               fontSize: "2.5rem",
               color: lighten(0.09, Colors.secondary),
             }}
-          />
+          />{" "}
         </DrawerCloseButton>
-      )}
+      )}{" "}
       <Drawer open={drawerOpen}>
         <List>
           <ListItemButton>
             <ButtonLangding
               width={"5rem"}
               nameButton="Trang chủ"
-              bgColor="#d44fac"
-              hovercolor="#d44fac"
+              bgColor="#005B82"
+              hovercolor="#0005E4"
               onClick={() => {
                 handleLangePage();
               }}
-            />
-          </ListItemButton>
-
+            />{" "}
+          </ListItemButton>{" "}
           <ListItemButton>
             <ButtonLangding
               width={"5rem"}
               nameButton="Giới thiệu"
-              bgColor="#d44fac"
-              hovercolor="#d44fac"
+              bgColor="#005B82"
+              hovercolor="#0005E4"
               onClick={() => {
                 handleIntroduce();
               }}
-            />
-          </ListItemButton>
-
+            />{" "}
+          </ListItemButton>{" "}
           <ListItemButton>
             <ButtonLangding
               width={"5rem"}
               nameButton="Đăng nhập"
-              bgColor="#d44fac"
-              hovercolor="#d44fac"
+              bgColor="#005B82"
+              hovercolor="#0005E4"
               onClick={() => {
                 handleLogin();
               }}
-            />
-          </ListItemButton>
+            />{" "}
+          </ListItemButton>{" "}
           <MiddleDivider />
-        </List>
-      </Drawer>
+        </List>{" "}
+      </Drawer>{" "}
     </>
   );
 }
