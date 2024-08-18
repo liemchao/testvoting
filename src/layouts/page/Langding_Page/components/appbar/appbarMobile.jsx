@@ -14,12 +14,11 @@ export default function AppbarMobile({ matches }) {
   return (
     <AppbarContainer>
       <IconButton onClick={() => setDrawerOpen(true)}>
-        <MenuIcon />
+        <MenuIcon style={{ color: "white" }} />
       </IconButton>
       <AppbarHeader textAlign={"center"} variant="h4">
-        <Box sx={{ flexGrow: 1, display: "flex", alignItems: "center", gap: 3 }}>
-          <img src={Logo} alt="Logo" style={{ width: "80px", height: "auto" }} />
-          <img src={design.icon} alt="Logo" style={{ width: "80px", height: "auto" }} />
+        <Box>
+          <img src={design.icon} alt="Logo" style={{ width: "100%", height: "auto" }} />
         </Box>
       </AppbarHeader>
       {/* <Actions matches={matches} /> */}

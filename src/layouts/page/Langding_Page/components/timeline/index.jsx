@@ -3,16 +3,27 @@ import Stack from "@mui/material/Stack";
 import Imagetimeline from "assets/images/MỐC.png";
 import { Typography } from "@mui/joy";
 import { useSelector } from "react-redux";
-
+import { useMediaQuery, useTheme } from "@mui/material";
+import { useState } from "react";
 export default function CustomizedSteppers() {
+  const theme = useTheme();
+  const [showMore, setShowMore] = useState(false);
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  const [is125Percent, setIs125Percent] = useState(false);
   const design = useSelector((state) => {
     return state.design;
   });
   return (
     <Stack sx={{ width: "100%" }} spacing={2}>
-      <div style={{ position: "relative", display: "inline-block", marginTop: "-6rem" }}>
+      <div
+        style={{
+          position: "relative",
+          display: "inline-block",
+          marginTop: isMobile ? "-1rem" : "-6rem",
+        }}
+      >
         <img
-          style={{ paddingLeft: "10%", paddingRight: "7%", width: "90%" }}
+          style={{ paddingLeft: "10%", paddingRight: "7%", width: isMobile ? "100%" : "90%" }}
           src={Imagetimeline}
           alt="Timeline"
         />
@@ -26,8 +37,8 @@ export default function CustomizedSteppers() {
             fontFamily: "UTM Swiss Condensed Regular",
             fontSize: 17,
             "@media (max-width: 600px)": {
-              fontSize: "14px",
-              bottom: "-40%",
+              fontSize: "10px",
+              bottom: "-10%",
               left: "5%",
             },
           }}
@@ -45,13 +56,13 @@ export default function CustomizedSteppers() {
             fontFamily: "UTM Swiss Condensed Regular",
             fontSize: 30,
             "@media (max-width: 600px)": {
-              fontSize: "14px",
-              bottom: "30%",
+              fontSize: "16px",
+              bottom: "1%",
               left: "5%",
             },
           }}
         >
-          {design.time1}
+          {/* {design.time1} */}10/10/2024
         </Typography>
         <Typography
           variant="body1"
@@ -63,9 +74,9 @@ export default function CustomizedSteppers() {
             fontFamily: "UTM Swiss Condensed Regular",
             fontSize: 16,
             "@media (max-width: 600px)": {
-              fontSize: "14px",
-              bottom: "-32%",
-              left: "30%",
+              fontSize: "10px",
+              bottom: "30%",
+              left: "24%",
             },
           }}
         >
@@ -82,13 +93,13 @@ export default function CustomizedSteppers() {
             fontFamily: "UTM Swiss Condensed Regular",
             fontSize: 30,
             "@media (max-width: 600px)": {
-              fontSize: "14px",
-              bottom: "37%",
-              left: "28%",
+              fontSize: "16px",
+              bottom: "40%",
+              left: "25%",
             },
           }}
         >
-          {design.time2}
+          {/* {design.time2} */}31/10/2024
         </Typography>
         <Typography
           variant="body1"
@@ -100,8 +111,8 @@ export default function CustomizedSteppers() {
             fontFamily: "UTM Swiss Condensed Regular",
             fontSize: 17,
             "@media (max-width: 600px)": {
-              fontSize: "14px",
-              bottom: "-20%",
+              fontSize: "10px",
+              bottom: "-25%",
               left: "52%",
             },
           }}
@@ -119,13 +130,13 @@ export default function CustomizedSteppers() {
             fontFamily: "UTM Swiss Condensed Regular",
             fontSize: 30,
             "@media (max-width: 600px)": {
-              fontSize: "14px",
-              bottom: "60%",
+              fontSize: "16px",
+              bottom: "-15%",
               left: "50%",
             },
           }}
         >
-          {design.time3}
+          {/* {design.time3} */}01/11/2024
         </Typography>
         <Typography
           variant="body1"
@@ -137,9 +148,9 @@ export default function CustomizedSteppers() {
             fontFamily: "UTM Swiss Condensed Regular",
             fontSize: 17,
             "@media (max-width: 600px)": {
-              fontSize: "14px",
-              bottom: "10%",
-              left: "75%",
+              fontSize: "10px",
+              bottom: "20%",
+              left: "77%",
             },
           }}
         >
@@ -156,13 +167,13 @@ export default function CustomizedSteppers() {
             fontFamily: "UTM Swiss Condensed Regular",
             fontSize: 30,
             "@media (max-width: 600px)": {
-              fontSize: "14px",
-              bottom: "84%",
-              left: "72%",
+              fontSize: "16px",
+              bottom: "30%",
+              left: "76%",
             },
           }}
         >
-          {design.time4}
+          {/* {design.time4} */}01/11/2024
         </Typography>
       </div>
     </Stack>

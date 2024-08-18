@@ -13,11 +13,31 @@ import { Assessment, CheckCircle, Security } from "@mui/icons-material";
 import { useMediaQuery } from "@mui/material";
 import { getDesiginHome } from "context/redux/action/action";
 import { useDispatch, useSelector } from "react-redux";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 export default function Section3() {
   const dispatch = useDispatch();
   const isMobile = useMediaQuery((theme) => theme.breakpoints.down("sm"));
+  const [is125Percent, setIs125Percent] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIs125Percent(window.innerWidth <= 1250);
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+  useEffect(() => {
+    const callAPI = async () => {
+      await dispatch(getDesiginHome());
+    };
+    callAPI();
+  }, []);
   useEffect(() => {
     const callAPI = async () => {
       await dispatch(getDesiginHome());
@@ -43,11 +63,12 @@ export default function Section3() {
             // src={designhome.logo4}
             alt="Logo"
             style={{
-              width: isMobile ? "15rem" : "30rem",
-              marginRight: "9.2rem",
-              marginTop: "2%",
+              width: isMobile ? "15rem" : is125Percent ? "25rem" : "30rem",
               height: "auto",
-              marginLeft: isMobile ? "40%" : "3%",
+              marginTop: isMobile ? "1rem" : is125Percent ? "1%" : "2%",
+              height: "auto",
+              marginLeft: isMobile ? "40%" : is125Percent ? "2%" : "3%",
+              marginRight: "9.2rem",
             }}
           />
           <Box
@@ -55,7 +76,7 @@ export default function Section3() {
               width: "100%",
               position: "relative",
               overflow: { xs: "initial", sm: "initial" }, // Overflow thay đổi khi trên web hoặc mobile
-              marginTop: isMobile ? "1rem" : "-1rem",
+              marginTop: isMobile ? "-7%" : "-1rem",
             }}
           >
             <Box
@@ -123,8 +144,9 @@ export default function Section3() {
                 >
                   <div style={{ marginTop: "-2rem" }}>
                     <Typography
-                      fontSize={{ xs: "30px", sm: "60px" }} // Kích thước font chữ thay đổi khi trên web hoặc mobile
+                      fontSize={isMobile ? "30px" : is125Percent ? "40px" : "60px"} // Kích thước font chữ thay đổi khi trên web hoặc mobile
                       sx={{
+                        whiteSpace: "nowrap",
                         color: designhome.textColor,
                         fontFamily: "VLABRAHAMLINCOLN",
                         textAlign: "start", // Đặt font chữ tùy chỉnh
@@ -136,7 +158,7 @@ export default function Section3() {
                     <Typography
                       level="body"
                       fontWeight="normal"
-                      fontSize={{ xs: "15px", sm: "25px" }} // Kích thước font chữ thay đổi khi trên web hoặc mobile
+                      fontSize={isMobile ? "15px" : is125Percent ? "20px" : "27px"} // Kích thước font chữ thay đổi khi trên web hoặc mobile
                       sx={{
                         marginLeft: "2rem",
                         color: designhome.textColor,
@@ -172,25 +194,6 @@ export default function Section3() {
                         hội Convocation Day.
                       </li> */}
                     </Typography>
-                    <Box
-                      sx={{
-                        display: "flex",
-                        gap: 3,
-                        mt: 2,
-                        position: "absolute",
-                        left: "50%",
-                        transform: "translateX(-50%)",
-                      }}
-                    ></Box>
-                    <div style={{ visibility: "hidden" }}>
-                      <ButtonLangding
-                        height={"3.5rem"}
-                        width={"15rem"}
-                        nameButton="THAM GIA"
-                        bgColor="#d44fac"
-                        borderRadius={"50px"}
-                      />
-                    </div>
                   </div>
                 </Sheet>
               </CardContent>

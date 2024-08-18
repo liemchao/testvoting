@@ -10,7 +10,7 @@ import ButtonLangding from "assets/theme/components/button/ButtonLangding";
 import { useMediaQuery } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import { getDesiginHome } from "context/redux/action/action";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { border, borderRadius, padding } from "polished";
 
 const useStyles = makeStyles((theme) => ({
@@ -45,6 +45,20 @@ export default function MyComponent() {
 
   const isMobile = useMediaQuery((theme) => theme.breakpoints.down("sm"));
   const classes = useStyles(isMobile);
+  const [is125Percent, setIs125Percent] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIs125Percent(window.innerWidth <= 1250);
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   useEffect(() => {
     const callAPI = async () => {
       await dispatch(getDesiginHome());
@@ -64,13 +78,14 @@ export default function MyComponent() {
             // }}
             display="flex"
             flexDirection={isMobile ? "column" : "row"} // Adjust the flexDirection based on screen size
-            mt={isMobile ? "-4rem" : "-6rem"} // Adjust the margin top based on screen size
+            mt={isMobile ? "-7rem" : "-6rem"} // Adjust the margin top based on screen size
             justifyContent="center"
             alignItems={isMobile ? "initial" : "center"} // Adjust the alignItems based on screen size
-            style={{ width: "100%" }}
+            style={{ width: "100%", border: "2px solid white", borderRadius: "20px" }}
           >
             <img
-              src={designhome.logo1}
+              src="https://res.cloudinary.com/ddrq4bfkk/image/upload/f_auto,q_auto/v1/2024/pgdhzmxv9v4bycophxys"
+              // src={designhome.logo1}
               alt="Logo"
               style={{
                 width: isMobile ? "15rem" : "30rem",
@@ -154,7 +169,8 @@ export default function MyComponent() {
                       <Typography
                         fontSize={isMobile ? "30px" : "60px"}
                         sx={{
-                          color: "#B83490",
+                          whiteSpace: "nowrap",
+                          color: designhome.textColor,
                           fontFamily: "VLABRAHAMLINCOLN",
                           textAlign: "start", // Đặt font chữ tùy chỉnh
                         }}
@@ -168,7 +184,7 @@ export default function MyComponent() {
                         fontSize={isMobile ? "15px" : "25px"}
                         sx={{
                           marginLeft: "2rem",
-                          color: "#B83490",
+                          color: designhome.textColor,
                           fontFamily: "UTM Swiss Condensed Regular",
                           // Đặt font chữ tùy chỉnh
                           marginTop: isMobile ? "0.2rem" : "0rem",
@@ -177,31 +193,18 @@ export default function MyComponent() {
                         }}
                       >
                         {/* {designhome.description1} */}
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at magna
-                        non nunc tristique rhoncus. Aliquam nibh ante, egestas id dictum a, commodo
-                        luctus libero. Praesent faucibus malesuada faucibus. Donec laoreet metus id
-                        laoreet malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        <li>
+                          Danh hiệu <strong>"Inspiring Instructor Awards"</strong> nhằm tôn vinh
+                          những nỗ lực, cống hiến của Giảng viên trong hành trình trao truyền kiến
+                          thức và cảm hứng đến sinh viên
+                          <strong> FPTU HCMC.</strong>
+                        </li>
+                        <li>
+                          Đây là danh hiệu được bình chọn định kỳ hằng năm và dành cho tất cả giảng
+                          viên dạy ở 3 học kì gần nhất của thời điểm đó:
+                          <strong> Fall, Spring, Summer.</strong>
+                        </li>
                       </Typography>
-                      <Box
-                        sx={{
-                          display: "flex",
-                          gap: 3,
-                          mt: 2,
-                          position: "absolute",
-                          left: "50%",
-                          transform: "translateX(-50%)",
-                        }}
-                      ></Box>
-                      <div style={{ visibility: "hidden" }}>
-                        <ButtonLangding
-                          height={"3.5rem"}
-                          width={"15rem"}
-                          nameButton="THAM GIA"
-                          bgColor="#d44fac"
-                          // onClick={onClickJoin}
-                          borderRadius={"50px"}
-                        />
-                      </div>
                     </div>
                   </Sheet>
                 </CardContent>
@@ -294,7 +297,7 @@ export default function MyComponent() {
                   >
                     <div style={{ marginTop: "-2rem" }}>
                       <Typography
-                        fontSize={isMobile ? "30px" : "60px"}
+                        fontSize={isMobile ? "30px" : is125Percent ? "40px" : "60px"}
                         sx={{
                           color: designhome.textColor,
                           fontFamily: "VLABRAHAMLINCOLN",
@@ -307,7 +310,7 @@ export default function MyComponent() {
                       <Typography
                         level="body"
                         fontWeight="normal"
-                        fontSize={isMobile ? "15px" : "25px"}
+                        fontSize={isMobile ? "15px" : is125Percent ? "20px" : "27px"}
                         sx={{
                           marginLeft: "2rem",
                           color: designhome.textColor,
@@ -337,26 +340,6 @@ export default function MyComponent() {
                           </React.Fragment>
                         ))} */}
                       </Typography>
-                      <Box
-                        sx={{
-                          display: "flex",
-                          gap: 3,
-                          mt: 2,
-                          position: "absolute",
-                          left: "50%",
-                          transform: "translateX(-50%)",
-                        }}
-                      ></Box>
-                      <div style={{ visibility: "hidden" }}>
-                        <ButtonLangding
-                          height={"3.5rem"}
-                          width={"15rem"}
-                          nameButton="THAM GIA"
-                          bgColor="#d44fac"
-                          // onClick={onClickJoin}
-                          borderRadius={"50px"}
-                        />
-                      </div>
                     </div>
                   </Sheet>
                 </CardContent>
@@ -367,11 +350,11 @@ export default function MyComponent() {
               // {designhome.logo1}
               alt="Logo"
               style={{
-                marginTop: "-1rem",
-                width: isMobile ? "15rem" : "31rem",
-                marginRight: "9.2rem",
+                marginTop: "-2rem",
+                width: isMobile ? "15rem" : is125Percent ? "22rem" : "32rem",
+                marginRight: isMobile ? "0%" : is125Percent ? "10%" : "3%",
                 height: "auto",
-                marginLeft: isMobile ? "15%" : "3%",
+                marginLeft: isMobile ? "15%" : is125Percent ? "10%" : "3%",
               }}
             />
           </Box>

@@ -3,6 +3,7 @@ import Fab from "@mui/material/Fab";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { animateScroll as scroll, scroller } from "react-scroll";
 import { makeStyles } from "@mui/styles";
+import { backgrounds } from "polished";
 
 const useStyles = makeStyles((theme) => ({
   fab: {
@@ -10,7 +11,10 @@ const useStyles = makeStyles((theme) => ({
     bottom: "8%",
     right: "48%",
     color: "white",
-    background: "linear-gradient(to right,#005F8A, #061949)",
+    backgroundColor: "transparent",
+    "&:hover": {
+      background: "linear-gradient(to right,#005F8A, #061949)",
+    },
   },
 }));
 

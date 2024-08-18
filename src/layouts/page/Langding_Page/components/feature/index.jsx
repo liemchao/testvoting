@@ -10,14 +10,27 @@ import ButtonLangding from "assets/theme/components/button/ButtonLangding";
 import Logo1 from "assets/images/Group 9.png";
 import { useMediaQuery } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { getDesiginHome } from "context/redux/action/action";
 import { borderRadius } from "polished";
 
 export default function Section2() {
   const dispatch = useDispatch();
   const isMobile = useMediaQuery((theme) => theme.breakpoints.down("sm"));
+  const [is125Percent, setIs125Percent] = useState(false);
 
+  useEffect(() => {
+    const handleResize = () => {
+      setIs125Percent(window.innerWidth <= 1250);
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   useEffect(() => {
     const callAPI = async () => {
       await dispatch(getDesiginHome());
@@ -47,10 +60,11 @@ export default function Section2() {
             alt="Logo"
             style={{
               padding: "2rem",
-              width: isMobile ? "15rem" : "40rem",
-              marginRight: "9.2rem",
+              width: isMobile ? "20rem" : is125Percent ? "30rem" : "36rem",
               height: "auto",
-              marginLeft: isMobile ? "50%" : "3%",
+              marginTop: isMobile ? "-1rem" : is125Percent ? "1rem" : "1rem",
+              height: "auto",
+              marginLeft: isMobile ? "0%" : is125Percent ? "3%" : "3%",
             }}
           />
           <Box
@@ -58,7 +72,9 @@ export default function Section2() {
               width: "100%",
               position: "relative",
               overflow: { xs: "initial", sm: "initial" }, // Overflow thay đổi khi trên web hoặc mobile
-              marginTop: isMobile ? "1rem" : "-1rem",
+              marginTop: isMobile ? "-6rem" : "-1rem",
+              marginRight: isMobile ? "3rem" : "9.2rem",
+              marginLeft: isMobile ? "15%" : is125Percent ? "10%" : "15%",
             }}
           >
             <Box
@@ -124,10 +140,15 @@ export default function Section2() {
                     position: "relative",
                   }}
                 >
-                  <div style={{ marginTop: "-2rem" }}>
+                  <div
+                    style={{
+                      marginTop: isMobile ? "1rem" : is125Percent ? "1rem" : "-2rem",
+                    }}
+                  >
                     <Typography
-                      fontSize={{ xs: "30px", sm: "60px" }} // Kích thước font chữ thay đổi khi trên web hoặc mobile
+                      fontSize={isMobile ? "30px" : is125Percent ? "40px" : "60px"} // Kích thước font chữ thay đổi khi trên web hoặc mobile
                       sx={{
+                        whiteSpace: "nowrap",
                         color: designhome.textColor,
                         fontFamily: "VLABRAHAMLINCOLN",
                         textAlign: "start", // Đặt font chữ tùy chỉnh
@@ -139,12 +160,13 @@ export default function Section2() {
                     <Typography
                       level="body"
                       fontWeight="normal"
-                      fontSize={{ xs: "16px", sm: "25px" }} // Kích thước font chữ thay đổi khi trên web hoặc mobile
+                      fontSize={isMobile ? "15px" : is125Percent ? "20px" : "27px"} // Kích thước font chữ thay đổi khi trên web hoặc mobile
                       sx={{
                         color: designhome.textColor,
                         fontFamily: "UTM Swiss Condensed Regular",
                         // Đặt font chữ tùy chỉnh
-                        marginTop: isMobile ? "0rem" : "-1rem",
+                        marginTop: isMobile ? "0rem" : "0.5rem",
+                        marginLeft: isMobile ? "5%" : is125Percent ? "1rem" : "2rem",
                         textAlign: "start", // Căn giữa nội dung
                       }}
                     >
@@ -161,25 +183,6 @@ export default function Section2() {
                       <li>Công bố top 10</li>
                       <li>Vinh danh top 10</li>
                     </Typography>
-                    <Box
-                      sx={{
-                        display: "flex",
-                        gap: 3,
-                        mt: 2,
-                        position: "absolute",
-                        left: "50%",
-                        transform: "translateX(-50%)",
-                      }}
-                    ></Box>
-                    <div style={{ visibility: "hidden" }}>
-                      <ButtonLangding
-                        height={"3.5rem"}
-                        width={"15rem"}
-                        nameButton="THAM GIA"
-                        bgColor="#d44fac"
-                        borderRadius={"50px"}
-                      />
-                    </div>
                   </div>
                 </Sheet>
               </CardContent>

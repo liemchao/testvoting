@@ -10,7 +10,7 @@ import Sheet from "@mui/joy/Sheet";
 import ButtonLangding from "assets/theme/components/button/ButtonLangding";
 import { getDesiginHome } from "context/redux/action/action";
 import { useDispatch, useSelector } from "react-redux";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -43,6 +43,21 @@ export default function Select3() {
   const dispatch = useDispatch();
   const isMobile = useMediaQuery((theme) => theme.breakpoints.down("sm"));
   const classes = useStyles(isMobile);
+
+  const [is125Percent, setIs125Percent] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIs125Percent(window.innerWidth <= 1250);
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   useEffect(() => {
     const callAPI = async () => {
       await dispatch(getDesiginHome());
@@ -62,10 +77,11 @@ export default function Select3() {
             mt={isMobile ? "-6rem" : "-6rem"} // Adjust the margin top based on screen size
             justifyContent="center"
             alignItems={isMobile ? "initial" : "center"} // Adjust the alignItems based on screen size
-            style={{ width: "100%" }}
+            style={{ width: "100%", borderRadius: "20px", border: "2px solid white" }}
           >
             <img
-              src={designhome.logo3}
+              src="https://res.cloudinary.com/ddrq4bfkk/image/upload/f_auto,q_auto/v1/2024/njz3wgwo2gkg0nqfq1ac"
+              // src={designhome.logo3}
               alt="Logo"
               style={{
                 width: isMobile ? "15rem" : "40rem",
@@ -171,34 +187,24 @@ export default function Select3() {
                           textAlign: "start", // Căn giữa nội dung
                         }}
                       >
-                        {designhome.description3?.split(".").map((sentence, index) => (
+                        {/* {designhome.description3?.split(".").map((sentence, index) => (
                           <React.Fragment key={index}>
-                            {index > 0} {/* Thêm dấu chấm (.) trước câu từ thứ hai trở đi */}
+                            {index > 0} 
                             {sentence}
-                            <br /> {/* Xuống dòng sau mỗi câu */}
+                            <br /> 
                           </React.Fragment>
-                        ))}
+                        ))} */}
+                        <li>
+                          Chương trình dành cho tất cả sinh viên đang học tại campus
+                          <strong> FPTU HCMC.</strong>
+                        </li>
+                        <li>Sinh viên bình chọn cho giảng viên yêu thích.</li>
+                        <li>Hệ thống sẽ tính điểm theo tổng lượt bình chọn của sinh viên.</li>
+                        <li>
+                          Sau thời gian bình chọn, hệ thống lọc ra top 10 giảng viên đạt danh hiệu
+                          <strong> “Inspiring Instructor Awards”.</strong>
+                        </li>
                       </Typography>
-                      <Box
-                        sx={{
-                          display: "flex",
-                          gap: 3,
-                          mt: 2,
-                          position: "absolute",
-                          left: "50%",
-                          transform: "translateX(-50%)",
-                        }}
-                      ></Box>
-                      <div style={{ visibility: "hidden" }}>
-                        <ButtonLangding
-                          height={"3.5rem"}
-                          width={"15rem"}
-                          nameButton="THAM GIA"
-                          bgColor="#d44fac"
-                          // onClick={onClickJoin}
-                          borderRadius={"50px"}
-                        />
-                      </div>
                     </div>
                   </Sheet>
                 </CardContent>
@@ -293,7 +299,7 @@ export default function Select3() {
                   >
                     <div style={{ marginTop: "-2rem" }}>
                       <Typography
-                        fontSize={isMobile ? "30px" : "60px"}
+                        fontSize={isMobile ? "30px" : is125Percent ? "40px" : "60px"}
                         sx={{
                           color: designhome.textColor,
                           fontFamily: "VLABRAHAMLINCOLN",
@@ -306,7 +312,7 @@ export default function Select3() {
                       <Typography
                         level="body"
                         fontWeight="normal"
-                        fontSize={isMobile ? "15px" : "25px"}
+                        fontSize={isMobile ? "15px" : is125Percent ? "20px" : "27px"}
                         sx={{
                           marginLeft: "2rem",
                           color: designhome.textColor,
@@ -346,16 +352,6 @@ export default function Select3() {
                           transform: "translateX(-50%)",
                         }}
                       ></Box>
-                      <div style={{ visibility: "hidden" }}>
-                        <ButtonLangding
-                          height={"3.5rem"}
-                          width={"15rem"}
-                          nameButton="THAM GIA"
-                          bgColor="#d44fac"
-                          // onClick={onClickJoin}
-                          borderRadius={"50px"}
-                        />
-                      </div>
                     </div>
                   </Sheet>
                 </CardContent>
@@ -366,10 +362,10 @@ export default function Select3() {
               // src={designhome.logo3}
               alt="Logo"
               style={{
-                width: isMobile ? "15rem" : "34rem",
-                marginRight: "9.2rem",
+                width: isMobile ? "15rem" : is125Percent ? "25rem" : "34rem",
+                marginRight: isMobile ? "0%" : is125Percent ? "14%" : "7rem",
                 height: "auto",
-                marginLeft: isMobile ? "17%" : "3%",
+                marginLeft: isMobile ? "17%" : is125Percent ? "10%" : "3%",
               }}
             />
           </Box>

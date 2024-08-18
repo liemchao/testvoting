@@ -96,7 +96,7 @@ export default function UserCard(props) {
       <Card
         orientation="horizontal"
         sx={{
-          backgroundImage: `url("${design.backgroundImage}")`,
+          backgroundImage: `url("https://res.cloudinary.com/ddrq4bfkk/image/upload/f_auto,q_auto/v1/2024/ijbissnt3d2gu1gru8zc")`,
           backgroundSize: "cover",
           backgroundColor: "transparent",
           border: "none",
@@ -221,7 +221,6 @@ export default function UserCard(props) {
                   sx={{ color: design.textColor, fontFamily: "UTM Swiss Condensed Regular" }}
                   fontWeight="lg"
                 >
-                  {" "}
                   {dayEnd}
                 </Typography>
               </div>

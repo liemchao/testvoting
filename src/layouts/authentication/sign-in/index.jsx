@@ -106,9 +106,9 @@ export default function SignInSide() {
               src={design.icon}
               alt="Logo"
               style={{
-                width: isMobile ? "70%" : "85%", // Để hình ảnh lấp đầy chiều rộng của container
+                width: isMobile ? "90%" : "85%", // Để hình ảnh lấp đầy chiều rộng của container
                 height: "auto",
-                marginRight: "7%",
+                marginRight: isMobile ? "1%" : "7%",
               }}
             />
           </Box>
@@ -126,7 +126,8 @@ export default function SignInSide() {
               backgroundColor: "transparent",
               backgroundSize: "cover",
               position: "relative",
-              marginRight: "10%",
+              marginLeft: isMobile ? "2%" : "0",
+              marginRight: isMobile ? "3%" : "10%",
             }}
           >
             <Box
@@ -149,7 +150,7 @@ export default function SignInSide() {
               component="form"
               noValidate
               onSubmit={formik.handleSubmit}
-              sx={{ marginTop: "-1rem" }}
+              sx={{ marginTop: "-1rem", marginRight: isMobile ? "4%" : "0" }}
             >
               <TextField
                 margin="normal"

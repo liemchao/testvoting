@@ -143,7 +143,7 @@ export default function AccountPopover() {
             variant="h8"
             fontWeight="bold"
             sx={{
-              color: "#B83490",
+              color: "black",
               fontFamily: "UTM Swiss Condensed Regular", // Đặt font chữ tùy chỉnh
             }}
             noWrap
@@ -154,7 +154,8 @@ export default function AccountPopover() {
             variant="h6"
             fontWeight="bold"
             sx={{
-              color: design.textColor,
+              color: "black",
+              //   color: design.textColor,
               fontFamily: "UTM Swiss Condensed Regular", // Đặt font chữ tùy chỉnh
             }}
             noWrap
@@ -173,7 +174,8 @@ export default function AccountPopover() {
               component={RouterLink}
               onClick={handleCloseNotion}
               sx={{
-                color: design.textColor,
+                color: "black",
+                // color: design.textColor,
                 fontFamily: "UTM Swiss Condensed Regular",
                 fontWeight: "bold",
               }}
@@ -193,13 +195,14 @@ export default function AccountPopover() {
             variant="h6"
             fontWeight="bold"
             sx={{
-              color: design.textColor,
+              color: "black",
+              //   color: design.textColor,
               fontFamily: "UTM Swiss Condensed Regular", // Đặt font chữ tùy chỉnh
             }}
           >
             Đăng xuất
           </Typography>
-          <LogoutIcon sx={{ marginLeft: 2, color: "#B83490" }} />
+          <LogoutIcon sx={{ marginLeft: 2, color: "black" }} />
         </MenuItem>
       </MenuPopover>
     </>

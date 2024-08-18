@@ -98,7 +98,7 @@ export default function DashboardNavbar({ onOpenSidebar, open }) {
                 }}
               ></div>
               <img
-                src={Logo}
+                src="https://res.cloudinary.com/ddrq4bfkk/image/upload/f_auto,q_auto/v1/2024/txl65bqasmnaqlpjuoy9"
                 alt="Logo"
                 width={isMobile ? "auto" : "25%"}
                 height={isMobile ? "auto" : "auto"}

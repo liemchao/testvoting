@@ -2,7 +2,7 @@ import * as React from "react";
 import ThemeProvider from "theme/index.js";
 import theme from "assets/theme";
 import Appbar from "./components/appbar";
-import { Container, Stack } from "@mui/material";
+import { Container, Stack, useMediaQuery } from "@mui/material";
 import AppDrawer from "./components/drawer";
 import { UIProvider } from "./context/ui";
 import Footer from "./components/footer";
@@ -20,7 +20,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 export default function IntroducePage() {
   const dispatch = useDispatch();
-
+  const isMobile = useMediaQuery((theme) => theme.breakpoints.down("sm"));
   React.useEffect(() => {
     const callAPI = async () => {
       await dispatch(getDesigin());
@@ -39,7 +39,7 @@ export default function IntroducePage() {
         backgroundSize: "cover",
       }}
     >
-      <Stack>
+      <Stack sx={{ gap: isMobile ? "3rem" : "0px" }}>
         <UIProvider>
           <Appbar />
           <BannerLeft />

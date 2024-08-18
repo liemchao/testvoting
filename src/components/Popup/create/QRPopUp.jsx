@@ -60,7 +60,7 @@ export default function QRPopUp(props) {
               }}
             />
           </Box>
-          <Box marginLeft={isMobile ? "10%" : "30%"}>
+          <Box marginLeft={isMobile ? "10%" : "29%"}>
             <ButtonLangding
               marginTop="2%"
               width="13rem"

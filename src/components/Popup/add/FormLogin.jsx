@@ -143,7 +143,11 @@ export default function SigninPoppop(props) {
 
   return (
     <Dialog sx={{ borderRadius: "10%" }} maxWidth="ms" open={OpenPopUp} onClose={handleClose}>
-      <DialogContent>
+      <DialogContent
+        sx={{
+          backgroundImage: `url("${"https://res.cloudinary.com/ddrq4bfkk/image/upload/f_auto,q_auto/v1/2024/ijbissnt3d2gu1gru8zc"}")`,
+        }}
+      >
         <form onSubmit={formik.handleSubmit}>
           <Grid container component="main">
             <Grid item xs={12} square>
@@ -155,7 +159,11 @@ export default function SigninPoppop(props) {
                 }}
               >
                 <Box sx={{ display: "flex", justifyContent: "center", bottom: "-2rem" }}>
-                  <img src={logo} alt="Logo" style={{ width: "90%", height: "100%" }} />
+                  <img
+                    src="https://res.cloudinary.com/ddrq4bfkk/image/upload/f_auto,q_auto/v1/2024/txl65bqasmnaqlpjuoy9"
+                    alt="Logo"
+                    style={{ width: "80%", height: "100%" }}
+                  />
                 </Box>
                 <Box component="form" noValidate onSubmit={formik.handleSubmit} sx={{ mt: 1 }}>
                   <TextField
@@ -171,6 +179,37 @@ export default function SigninPoppop(props) {
                     onChange={(e) => {
                       formik.handleChange(e);
                     }}
+                    sx={{
+                      "& label": {
+                        color: "white",
+                      },
+                      "& label.Mui-focused": {
+                        color: "white",
+                      },
+                      "& .MuiInput-underline:after": {
+                        borderBottomColor: "white",
+                      },
+                      "& .MuiOutlinedInput-root": {
+                        "& fieldset": {
+                          borderColor: "white",
+                        },
+                        "&:hover fieldset": {
+                          borderColor: "white",
+                        },
+                        "&.Mui-focused fieldset": {
+                          borderColor: "white",
+                        },
+                        "& input": {
+                          color: "white",
+                        },
+                        "&::placeholder": {
+                          color: "white",
+                        },
+                        "&.Mui-focused input": {
+                          color: "white",
+                        },
+                      },
+                    }}
                   />
                   <TextField
                     margin="normal"
@@ -185,11 +224,58 @@ export default function SigninPoppop(props) {
                     onChange={(e) => {
                       formik.handleChange(e);
                     }}
+                    sx={{
+                      "& label": {
+                        color: "white",
+                      },
+                      "& label.Mui-focused": {
+                        color: "white",
+                      },
+                      "& .MuiInput-underline:after": {
+                        borderBottomColor: "white",
+                      },
+                      "& .MuiOutlinedInput-root": {
+                        "& fieldset": {
+                          borderColor: "white",
+                        },
+                        "&:hover fieldset": {
+                          borderColor: "white",
+                        },
+                        "&.Mui-focused fieldset": {
+                          borderColor: "white",
+                        },
+                        "& input": {
+                          color: "white",
+                        },
+                        "&::placeholder": {
+                          color: "white",
+                        },
+                        "&.Mui-focused input": {
+                          color: "white",
+                        },
+                      },
+                    }}
                   />
                   <Grid container>
                     <Grid item xs>
                       <FormControlLabel
-                        control={<Checkbox value="remember" color="primary" />}
+                        sx={{
+                          color: "white", // Đổi màu checkbox sang trắng
+                          "&.Mui-checked": {
+                            color: "white", // Đổi màu checkbox khi được chọn sang trắng
+                          },
+                        }}
+                        control={
+                          <Checkbox
+                            sx={{
+                              color: "white", // Đổi màu checkbox sang trắng
+                              "&.Mui-checked": {
+                                color: "white", // Đổi màu checkbox khi được chọn sang trắng
+                              },
+                            }}
+                            value="remember"
+                          />
+                        }
                         label="Ghi nhớ tài khoản"
                       />
                     </Grid>

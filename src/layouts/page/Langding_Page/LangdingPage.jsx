@@ -54,7 +54,20 @@ export default function LangdingPage() {
   };
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  const [is125Percent, setIs125Percent] = React.useState(false);
 
+  React.useEffect(() => {
+    const handleResize = () => {
+      setIs125Percent(window.innerWidth <= 1250);
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   const design = useSelector((state) => {
     return state.design;
   });
@@ -109,9 +122,14 @@ export default function LangdingPage() {
             id="section2"
             display="flex"
             justifyContent="center"
-            sx={{ p: 1, marginTop: "-11rem" }}
+            sx={{ p: 1, marginTop: isMobile ? "-20rem" : "-14rem" }}
           >
-            <img style={{ width: isMobile ? "80%" : "40%" }} src={ImageThele}></img>
+            <img
+              style={{
+                width: isMobile ? "90%" : is125Percent ? "30%" : "38%",
+              }}
+              src={ImageThele}
+            ></img>
           </Box>
           <VotingRules />
           <Box display="flex" justifyContent="center" sx={{ p: 10, visibility: "hidden" }}></Box>
@@ -121,11 +139,11 @@ export default function LangdingPage() {
             sx={{
               // backgroundImage: `url("https://res.cloudinary.com/ddrq4bfkk/image/upload/f_auto,q_auto/v1/2024/sjwd61p3aomt6edqu6sf")`,
               backgroundSize: "100% 100%",
-              mt: isMobile ? -24 : -2,
+              mt: isMobile ? -16 : -2,
             }}
           >
             <Box display="flex" justifyContent="center" sx={{ p: 1, mt: "-1%" }}>
-              <img style={{ width: isMobile ? "70%" : "40%" }} src={ImageMocTime}></img>
+              <img style={{ width: isMobile ? "100%" : "40%" }} src={ImageMocTime}></img>
             </Box>
             <MyTimeline />
           </Box>
@@ -137,8 +155,13 @@ export default function LangdingPage() {
               backgroundSize: "100% 100%",
             }}
           >
-            <Box id="section4" display="flex" justifyContent="center" sx={{ p: 2, mt: 5 }}>
-              <img style={{ width: isMobile ? "80%" : "37%" }} src={ImageTimeCount}></img>
+            <Box
+              id="section4"
+              display="flex"
+              justifyContent="center"
+              sx={{ p: 2, mt: isMobile ? -3 : 5 }}
+            >
+              <img style={{ width: isMobile ? "100%" : "37%" }} src={ImageTimeCount}></img>
             </Box>
             <CountdownTimer />
             <Box display="flex" justifyContent="center" sx={{ p: 2, visibility: "hidden" }}>

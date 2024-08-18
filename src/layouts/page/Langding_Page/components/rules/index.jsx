@@ -1,10 +1,34 @@
-import React, { useState } from "react";
-import { Container, Typography, Grid, Box, Card, CardContent } from "@mui/material";
+import React, { useEffect, useState } from "react";
+import {
+  Container,
+  Typography,
+  Grid,
+  Box,
+  Card,
+  CardContent,
+  useMediaQuery,
+  useTheme,
+} from "@mui/material";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import { useSelector } from "react-redux";
 const VotingRules = () => {
+  const theme = useTheme();
   const [showMore, setShowMore] = useState(false);
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  const [is125Percent, setIs125Percent] = useState(false);
 
+  useEffect(() => {
+    const handleResize = () => {
+      setIs125Percent(window.innerWidth <= 1250);
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   const handleShowMore = () => {
     setShowMore(true);
   };
@@ -16,7 +40,7 @@ const VotingRules = () => {
     return state.design;
   });
   return (
-    <Container sx={{ marginTop: "-5rem" }}>
+    <Container sx={{ marginTop: isMobile ? "-1rem" : "-5rem" }}>
       <Grid container spacing={2}>
         <Grid item xs={12}>
           <Box
@@ -36,6 +60,9 @@ const VotingRules = () => {
                   fontSize: "1.2rem",
                   // Kích thước chữ khi màn hình nhỏ hơn 600px
                 },
+                "@media (max-width: 1250px)": {
+                  fontSize: "1.2rem",
+                },
               }}
             >
               Quy tắc bình chọn:
@@ -49,6 +76,9 @@ const VotingRules = () => {
                   fontSize: "1.2rem",
                   // Kích thước chữ khi màn hình nhỏ hơn 600px
                 },
+                "@media (max-width: 1250px)": {
+                  fontSize: "1.2rem",
+                },
               }}
             >
               1 sinh viên có 1 lần tham gia với 3 phiếu bình chọn.
@@ -61,6 +91,9 @@ const VotingRules = () => {
                 "@media (max-width: 600px)": {
                   fontSize: "1.2rem",
                   // Kích thước chữ khi màn hình nhỏ hơn 600px
+                },
+                "@media (max-width: 1250px)": {
+                  fontSize: "1.2rem",
                 },
               }}
             >
@@ -76,6 +109,9 @@ const VotingRules = () => {
                 "@media (max-width: 600px)": {
                   fontSize: "1.1rem",
                   // Kích thước chữ khi màn hình nhỏ hơn 600px
+                },
+                "@media (max-width: 1250px)": {
+                  fontSize: "1.1rem",
                 },
               }}
             >
@@ -105,6 +141,7 @@ const VotingRules = () => {
               >
                 <Card
                   sx={{
+                    marginTop: "-1%",
                     backgroundColor: "transparent",
                     backgroundImage: `url("https://res.cloudinary.com/ddrq4bfkk/image/upload/f_auto,q_auto/v1/2024/sjwd61p3aomt6edqu6sf")`,
                     backgroundSize: "100% 100%",
@@ -222,6 +259,10 @@ const VotingRules = () => {
               >
                 <Card
                   sx={{
+                    "@media (max-width: 1250px)": {
+                      height: "87%",
+                      marginTop: "-1%",
+                    },
                     backgroundColor: "transparent",
                     backgroundImage: `url("https://res.cloudinary.com/ddrq4bfkk/image/upload/f_auto,q_auto/v1/2024/sjwd61p3aomt6edqu6sf")`,
                     backgroundSize: "100% 100%",
@@ -231,6 +272,7 @@ const VotingRules = () => {
                     <Typography
                       variant="h5"
                       sx={{
+                        fontSize: 20,
                         color: design.textColor,
                         fontFamily: "'UTM Swiss Condensed Regular'", // Đặt font chữ tùy chỉnh
                         "@media (max-width: 600px)": {
@@ -245,6 +287,7 @@ const VotingRules = () => {
                       variant="h5"
                       fontWeight="bold"
                       sx={{
+                        fontSize: 20,
                         color: design.textColor,
                         fontFamily: "'UTM Swiss Condensed Regular'", // Đặt font chữ tùy chỉnh
                         "@media (max-width: 600px)": {
@@ -286,6 +329,8 @@ const VotingRules = () => {
                     <Typography
                       variant="h5"
                       sx={{
+                        marginTop: "-0.5rem",
+                        fontSize: 20,
                         color: design.textColor,
                         fontFamily: "'UTM Swiss Condensed Regular'", // Đặt font chữ tùy chỉnh
                         "@media (max-width: 600px)": {
@@ -300,6 +345,7 @@ const VotingRules = () => {
                       variant="h5"
                       fontWeight="bold"
                       sx={{
+                        fontSize: 20,
                         color: design.textColor,
                         fontFamily: "'UTM Swiss Condensed Regular'", // Đặt font chữ tùy chỉnh
                         "@media (max-width: 600px)": {
@@ -339,6 +385,10 @@ const VotingRules = () => {
                     <Typography
                       variant="h5"
                       sx={{
+                        marginTop: "-0.5rem",
+                        "@media (max-width: 1250px)": {
+                          fontSize: "20px",
+                        },
                         color: design.textColor,
                         fontFamily: "'UTM Swiss Condensed Regular'", // Đặt font chữ tùy chỉnh
                         "@media (max-width: 600px)": {
@@ -368,6 +418,7 @@ const VotingRules = () => {
                       variant="h5"
                       fontWeight="bold"
                       sx={{
+                        fontSize: 20,
                         color: design.textColor,
                         fontFamily: "'UTM Swiss Condensed Regular'", // Đặt font chữ tùy chỉnh
                         "@media (max-width: 600px)": {
@@ -392,10 +443,14 @@ const VotingRules = () => {
                     xs: 6,
                     // Thay đổi kích thước card khi màn hình nhỏ hơn 600px
                   },
+                  "@media (max-width: 1250px)": {
+                    paddingBottom: "5rem",
+                  },
                 }}
               >
                 <Card
                   sx={{
+                    marginTop: "-1%",
                     backgroundColor: "transparent",
                     backgroundImage: `url("https://res.cloudinary.com/ddrq4bfkk/image/upload/f_auto,q_auto/v1/2024/sjwd61p3aomt6edqu6sf")`,
                     backgroundSize: "100% 100%",

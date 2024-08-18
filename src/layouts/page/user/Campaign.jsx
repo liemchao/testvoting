@@ -126,7 +126,6 @@ export default function CampaignList() {
         ) : (
           <Stack direction="row" alignItems="center" mb={1}>
             <Box sx={{ flex: 1, paddingRight: "1rem" }}>
-              {" "}
               <Box
                 component="form"
                 sx={{
@@ -136,6 +135,37 @@ export default function CampaignList() {
                 autoComplete="off"
               >
                 <TextField
+                  sx={{
+                    "& label": {
+                      color: "white",
+                    },
+                    "& label.Mui-focused": {
+                      color: "white",
+                    },
+                    "& .MuiInput-underline:after": {
+                      borderBottomColor: "white",
+                    },
+                    "& .MuiOutlinedInput-root": {
+                      "& fieldset": {
+                        borderColor: "white",
+                      },
+                      "&:hover fieldset": {
+                        borderColor: "white",
+                      },
+                      "&.Mui-focused fieldset": {
+                        borderColor: "white",
+                      },
+                      "& input": {
+                        color: "white",
+                      },
+                      "&::placeholder": {
+                        color: "white",
+                      },
+                      "&.Mui-focused input": {
+                        color: "white",
+                      },
+                    },
+                  }}
                   inputProps={{ "aria-label": "search candidate" }}
                   id="outlined-basic"
                   value={title}
@@ -148,7 +178,12 @@ export default function CampaignList() {
               </Box>
             </Box>
             <Box sx={{ display: "flex", justifyContent: "flex-start", padding: 1 }}>
-              <Select
+              {/* <Select
+                InputLabelProps={{
+                  sx: {
+                    color: "white",
+                  },
+                }}
                 sx={{
                   display: "flex",
                   justifyContent: "flex-end",
@@ -164,7 +199,7 @@ export default function CampaignList() {
                   setProcess(e.target.value);
                 }}
                 options={getOptions()}
-              />
+              /> */}
             </Box>
           </Stack>
         )}

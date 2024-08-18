@@ -78,7 +78,10 @@ export default function MainCard(props) {
         orientation="horizontal"
         sx={{
           marginTop: "2%",
-          width: "95%",
+          width: "96%",
+          "@media (max-width: 1250px)": {
+            width: "100%",
+          },
           flexWrap: "wrap",
           [`& > *`]: {
             "--stack-point": "500px",
@@ -103,6 +106,10 @@ export default function MainCard(props) {
             sx={{
               borderRadius: "sm",
               p: 7,
+              "@media (max-width: 1250px)": {
+                p: 3,
+              },
+
               my: 1.5,
               mt: 0,
               display: "flex",
@@ -131,20 +138,23 @@ export default function MainCard(props) {
               <Typography
                 level="body"
                 fontWeight="normal"
-                fontSize={isMobile ? 13 : 32}
+                fontSize={isMobile ? 10 : 32}
                 sx={{
                   color: design.textColor,
                   fontFamily: "UTM Swiss Condensed Regular",
                   // Đặt font chữ tùy chỉnh
                   marginTop: "-1rem",
                   textAlign: "center", // Căn giữa nội dung
+                  "@media (max-width: 1250px)": {
+                    fontSize: 26,
+                  },
                 }}
               >
                 {/* {description} */}
                 Danh hiệu <strong>Inspiring Instructor Awards 2024</strong> nhằm tôn vinh những nỗ
                 lực, cống hiến của Giảng viên trong hành trình định hướng, giúp đỡ sinh viên thu
                 nhận kiến thức và truyền cảm hứng đến sinh viên <strong>FPTU HCMC</strong> trong 3
-                học kỳ: <strong>Fall 2024, Spring 2024 và Summer 2024.</strong>
+                học kỳ: <strong>Fall 2023, Spring 2024 và Summer 2024.</strong>
               </Typography>
               <Box
                 sx={{

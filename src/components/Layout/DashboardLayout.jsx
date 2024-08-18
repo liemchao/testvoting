@@ -26,7 +26,7 @@ export default function DashboardLayout() {
     display: "flex",
     minHeight: "100%",
     overflow: "hidden",
-    backgroundImage: `url("${design.backgroundImage}")`,
+    backgroundImage: `url("https://res.cloudinary.com/ddrq4bfkk/image/upload/f_auto,q_auto/v1/2024/ijbissnt3d2gu1gru8zc")`,
     backgroundColor: "transparent",
 
     backgroundSize: "100% 100%",

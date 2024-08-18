@@ -132,8 +132,9 @@ export default function Footer() {
             sx={{
               background: "linear-gradient(to right,#005F8A, #061949)",
               borderRadius: "20px",
-              padding: "1rem",
+              padding: "0.7rem",
               marginTop: "6rem",
+              whiteSpace: "nowrap",
               position: "relative",
               float: "right",
               "& > span": {

@@ -22,12 +22,30 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       flexDirection: "column",
     },
+    [theme.breakpoints.between("sm", "md")]: {
+      flexDirection: "row",
+    },
+    [theme.breakpoints.up("md")]: {
+      flexDirection: "row",
+    },
     marginTop: "2%",
   },
   image: {
-    marginLeft: "5%",
-    width: "100%",
-    marginBottom: theme.spacing(2),
+    [theme.breakpoints.down("sm")]: {
+      marginLeft: "0",
+      width: "100%",
+      marginBottom: theme.spacing(2),
+    },
+    [theme.breakpoints.between("sm", "md")]: {
+      marginLeft: "5%",
+      width: "100%",
+      marginBottom: 0,
+    },
+    [theme.breakpoints.up("md")]: {
+      marginLeft: "5%",
+      width: "100%",
+      marginBottom: 0,
+    },
   },
 }));
 export default function Promotions() {
@@ -76,7 +94,7 @@ export default function Promotions() {
 
   return (
     <>
-      <Grid container className={classes.root}>
+      <Grid container className={classes.root} spacing={2}>
         <Grid item xs={12} md={6}>
           <MainCard
             id={campaigns.campaignId}

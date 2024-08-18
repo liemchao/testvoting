@@ -102,16 +102,16 @@ const CountdownTimer = () => {
           style={{
             display: "flex",
             alignItems: "center",
-            paddingLeft: "5%",
-            paddingRight: "5%",
-            height: "20rem",
+            paddingLeft: isMobile ? "2%" : "5%",
+            paddingRight: isMobile ? "3%" : "5%",
+            height: isMobile ? "10rem" : "17rem",
             backgroundImage: `url("https://res.cloudinary.com/ddrq4bfkk/image/upload/f_auto,q_auto/v1/2024/pzi2antdfpox6zoloxk5")`,
             backgroundSize: "100% 100%",
           }}
         >
           <Typography
             alignItems="center"
-            fontSize={{ xs: "1rem", md: "7rem" }}
+            fontSize={{ xs: "3rem", md: "7rem" }}
             fontWeight="bold"
             sx={{
               background: gradient,
@@ -128,10 +128,10 @@ const CountdownTimer = () => {
           style={{
             display: "flex",
             alignItems: "center",
-            paddingLeft: "5%",
-            paddingRight: "5%",
+            paddingLeft: isMobile ? "2%" : "5%",
+            paddingRight: isMobile ? "3%" : "5%",
             width: "50%",
-            height: "20rem",
+            height: isMobile ? "10rem" : "17rem",
             backgroundImage: `url("https://res.cloudinary.com/ddrq4bfkk/image/upload/f_auto,q_auto/v1/2024/pzi2antdfpox6zoloxk5")`,
             backgroundSize: "100% 100%",
           }}
@@ -139,7 +139,7 @@ const CountdownTimer = () => {
           <Typography
             fontWeight="bold"
             display="inline"
-            fontSize={{ xs: "1rem", md: "7rem" }}
+            fontSize={{ xs: "3rem", md: "7rem" }}
             sx={{
               background: gradient,
               WebkitBackgroundClip: "text",
@@ -155,10 +155,10 @@ const CountdownTimer = () => {
           style={{
             display: "flex",
             alignItems: "center",
-            paddingLeft: "5%",
-            paddingRight: "5%",
+            paddingLeft: isMobile ? "2%" : "5%",
+            paddingRight: isMobile ? "3%" : "5%",
             width: "100%",
-            height: "20rem",
+            height: isMobile ? "10rem" : "17rem",
             backgroundImage: `url("https://res.cloudinary.com/ddrq4bfkk/image/upload/f_auto,q_auto/v1/2024/pzi2antdfpox6zoloxk5")`,
             backgroundSize: "100% 100%",
           }}
@@ -166,7 +166,7 @@ const CountdownTimer = () => {
           <Typography
             fontWeight="bold"
             display="inline"
-            fontSize={{ xs: "1rem", md: "7rem" }}
+            fontSize={{ xs: "3rem", md: "7rem" }}
             sx={{
               background: gradient,
               WebkitBackgroundClip: "text",
@@ -182,13 +182,13 @@ const CountdownTimer = () => {
           style={{
             display: "flex",
             alignItems: "center",
-            paddingLeft: "5%",
-            paddingRight: "5%",
+            paddingLeft: isMobile ? "2%" : "5%",
+            paddingRight: isMobile ? "3%" : "5%",
             backgroundImage: `url("https://res.cloudinary.com/ddrq4bfkk/image/upload/f_auto,q_auto/v1/2024/pzi2antdfpox6zoloxk5")`,
             backgroundSize: "100% 100%",
             backgroundRepeat: "no-repeat",
             width: "100%",
-            height: "20rem",
+            height: isMobile ? "10rem" : "17rem",
             // overflow: hidden,
             // position: relative,
           }}
@@ -197,7 +197,7 @@ const CountdownTimer = () => {
             fontWeight="bold"
             display="flex"
             textAlign={"center"}
-            fontSize={{ xs: "1rem", md: "7rem" }}
+            fontSize={{ xs: "3rem", md: "7rem" }}
             sx={{
               background: gradient,
               WebkitBackgroundClip: "text",
@@ -214,15 +214,15 @@ const CountdownTimer = () => {
         style={{
           display: "flex",
           justifyContent: "center",
-          marginTop: "-2rem",
+          marginTop: isMobile ? "-1rem" : "-1.5rem",
           marginBottom: "2rem",
-          gap: "25%",
+          gap: isMobile ? "21%" : "25%",
         }}
       >
         <Typography
           variant="h5"
           display="inline"
-          fontSize={{ xs: "2rem", md: "2rem" }}
+          fontSize={{ xs: "13px", md: "2rem" }}
           sx={{
             color: "white",
             fontFamily: "UTM Swiss Condensed Regular",
@@ -234,7 +234,7 @@ const CountdownTimer = () => {
         <Typography
           variant="h5"
           display="inline"
-          fontSize={{ xs: "2rem", md: "2rem" }}
+          fontSize={{ xs: "13px", md: "2rem" }}
           sx={{
             color: "white",
             fontFamily: "UTM Swiss Condensed Regular",
@@ -246,7 +246,7 @@ const CountdownTimer = () => {
         <Typography
           variant="h5"
           display="inline"
-          fontSize={{ xs: "2rem", md: "2rem" }}
+          fontSize={{ xs: "13px", md: "2rem" }}
           sx={{
             color: "white",
             fontFamily: "UTM Swiss Condensed Regular",
@@ -258,7 +258,7 @@ const CountdownTimer = () => {
         <Typography
           variant="h5"
           display="inline"
-          fontSize={{ xs: "2rem", md: "2rem" }}
+          fontSize={{ xs: "13px", md: "2rem" }}
           sx={{
             color: "white",
             fontFamily: "UTM Swiss Condensed Regular",
