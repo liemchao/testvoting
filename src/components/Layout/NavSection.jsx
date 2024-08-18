@@ -15,7 +15,7 @@ const ListItemStyle = styled((props) => <ListItemButton disableGutters {...props
     height: 48,
     position: "relative",
     // textTransform: "capitalize",
-    color: "black",
+    color: "white",
     borderRadius: theme.shape.borderRadius,
     backgroundColor: "transparent",
     "&:hover": {
@@ -29,7 +29,7 @@ const ListItemStyle = styled((props) => <ListItemButton disableGutters {...props
 const ListItemIconStyle = styled(ListItemIcon)({
   width: 22,
   height: 22,
-  color: "black",
+  color: "white",
   backgroundColor: "transparent",
   "&:hover": {
     color: "white",
@@ -59,17 +59,17 @@ function NavItem({ item, active }) {
   };
 
   const activeRootStyle = {
-    background: "linear-gradient(to right,#005F8A, #061949)",
+    background: "linear-gradient(to right, #000000, #0007EF)",
     color: "white",
     backgroundColor: "transparent",
     "&:hover": {
-      background: "linear-gradient(to right, #000000, #0007EF)",
+      background: "linear-gradient(to right,#005F8A, #061949)",
       color: "white",
     },
   };
 
   const activeSubStyle = {
-    background: "linear-gradient(to right,#005F8A, #061949)",
+    background: "linear-gradient(to right, #000000, #0007EF)",
     color: "white",
   };
 

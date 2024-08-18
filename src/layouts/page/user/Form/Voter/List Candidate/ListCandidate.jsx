@@ -595,7 +595,7 @@ export default function ListCandidate() {
                       startAdornment: (
                         <div
                           style={{
-                            color: "#D44FAC",
+                            color: "#FF4267",
                             marginTop: "2px",
                           }}
                         >
@@ -680,7 +680,7 @@ export default function ListCandidate() {
                     }
                     InputProps={{
                       startAdornment: (
-                        <div style={{ color: "#D44FAC", marginTop: "2px" }}>
+                        <div style={{ color: "#FF4267", marginTop: "2px" }}>
                           <Favorite />
                         </div>
                       ),
@@ -767,7 +767,7 @@ export default function ListCandidate() {
                     }
                     InputProps={{
                       startAdornment: (
-                        <div style={{ color: "#D44FAC", marginTop: "2px" }}>
+                        <div style={{ color: "#FF4267", marginTop: "2px" }}>
                           <Favorite />
                         </div>
                       ),
@@ -873,7 +873,7 @@ export default function ListCandidate() {
                     }
                     InputProps={{
                       startAdornment: (
-                        <div style={{ color: "#D44FAC", marginTop: "2px" }}>
+                        <div style={{ color: "#FF4267", marginTop: "2px" }}>
                           <Favorite />
                         </div>
                       ),
@@ -969,7 +969,7 @@ export default function ListCandidate() {
                   }
                   InputProps={{
                     startAdornment: (
-                      <div style={{ color: "#D44FAC", marginTop: "2px" }}>
+                      <div style={{ color: "#FF4267", marginTop: "2px" }}>
                         <Favorite />
                       </div>
                     ),
@@ -1043,7 +1043,9 @@ export default function ListCandidate() {
             display: "flex",
             justifyContent: "center",
             pb: 3,
+            mt: 1,
           }}
+          backgroundColor="secondary"
           color="secondary"
           count={totalPages}
           page={currentPage}

@@ -96,9 +96,9 @@ export default function CardLike(props) {
               right: "1rem",
               bottom: 0,
               transform: "translateY(50%)",
-              backgroundColor: "#D44FAC",
+              backgroundColor: "#FF4267",
               "&:hover": {
-                backgroundColor: "#D44FAC",
+                backgroundColor: "#FFA500",
               },
             }}
           >
@@ -135,7 +135,7 @@ export default function CardLike(props) {
               color="success"
               onClick={onClickUnVote}
               sx={{
-                backgroundColor: isVoted ? "#FFA500" : "#D44FAC",
+                backgroundColor: isVoted ? "#FFA500" : "#FF4267",
                 "&:hover": {
                   backgroundColor: isVoted ? "#D44FAC" : "#F7941D",
                 },
@@ -157,7 +157,7 @@ export default function CardLike(props) {
               color="success"
               onClick={onClickLike}
               sx={{
-                backgroundColor: isVoted ? "#FFA500" : "#D44FAC",
+                backgroundColor: isVoted ? "#FFA500" : "#FF4267",
                 "&:hover": {
                   backgroundColor: isVoted ? "#D44FAC" : "#F7941D",
                 },
@@ -173,12 +173,12 @@ export default function CardLike(props) {
             </IconButton>
           )}
         </CardOverflow>
-        <CardContent>
+        <CardOverflow sx={{ bgcolor: "#9A99A6" }}>
           <Typography
             level="h2"
             fontSize="md"
             sx={{
-              color: "#B83490",
+              color: "white",
             }}
           >
             <Link onClick={handleClick} overlay underline="none" color="#B83490">
@@ -192,12 +192,13 @@ export default function CardLike(props) {
                 overflow: "hidden",
                 textOverflow: "ellipsis",
                 fontSize: "15px",
+                color: "white",
               }}
             >
               {groupName}
             </Typography>
           </Typography>
-        </CardContent>
+        </CardOverflow>
         <CardOverflow variant="soft" sx={{ bgcolor: "background.level1", mt: "-0.5rem" }}>
           <Divider inset="context" />
           <CardContent orientation="horizontal">

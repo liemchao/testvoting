@@ -112,7 +112,7 @@ export default function DashboardSidebar({ isOpenSidebar, onCloseSidebar }) {
           PaperProps={{
             sx: {
               width: DRAWER_WIDTH,
-              bgcolor: "background.default",
+              backgroundImage: `url("${"https://res.cloudinary.com/ddrq4bfkk/image/upload/f_auto,q_auto/v1/2024/w7laacajw71xpbvsmvue"}")`,
               borderRightStyle: "dashed",
             },
           }}
