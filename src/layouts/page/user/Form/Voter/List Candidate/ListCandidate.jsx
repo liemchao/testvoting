@@ -476,7 +476,7 @@ export default function ListCandidate() {
       title="Candidate"
       sx={{
         backgroundImage:
-          "url(https://res.cloudinary.com/dxevluwyr/image/upload/v1694155547/BackGround_xhgdfp.png)",
+          "url(https://res.cloudinary.com/ddrq4bfkk/image/upload/f_auto,q_auto/v1/2024/ijbissnt3d2gu1gru8zc)",
         backgroundColor: "transparent",
 
         backgroundSize: "100% 100%",
@@ -497,7 +497,7 @@ export default function ListCandidate() {
                     fontFamily: "UTM Swiss Condensed Regular", // Đặt font chữ tùy chỉnh
                   }}
                 >
-                  Inspiring Instructor Awards 2023
+                  Inspiring Instructor Awards 2024
                 </Typography>
               ) : (
                 <Typography
@@ -505,7 +505,7 @@ export default function ListCandidate() {
                   fontWeight="bold"
                   sx={{
                     fontSize: isMobile ? "20px" : "40px",
-                    color: "#B83490",
+                    color: "black",
                     fontFamily: "UTM Swiss Condensed Regular", // Đặt font chữ tùy chỉnh
                   }}
                 >
@@ -521,8 +521,8 @@ export default function ListCandidate() {
                     <IconButton
                       sx={{
                         marginLeft: "10px",
-                        color: "#B83490",
-                        fontSize: "70px",
+                        color: "black",
+                        fontSize: "70%",
                       }}
                       color="primary"
                       onClick={handlePolicyClick}
