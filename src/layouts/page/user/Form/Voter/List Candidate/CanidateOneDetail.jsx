@@ -128,7 +128,7 @@ export default function CandateOneDetail() {
             <Typography
               fontSize={isMobile ? "30px" : "60px"}
               sx={{
-                color: "#B83490",
+                color: "white",
                 fontFamily: "VLABRAHAMLINCOLN",
                 textAlign: "start", // Đặt font chữ tùy chỉnh
               }}
@@ -139,7 +139,7 @@ export default function CandateOneDetail() {
             <Typography
               fontSize="60px"
               sx={{
-                color: "#B83490",
+                color: "white",
                 fontFamily: "VLABRAHAMLINCOLN",
                 textAlign: "start", // Đặt font chữ tùy chỉnh
               }}
@@ -172,7 +172,7 @@ export default function CandateOneDetail() {
                 fontSize={isMobile ? "30px" : "70px"}
                 sx={{
                   whiteSpace: "nowrap",
-                  color: "#B83490",
+                  color: "white",
                   fontFamily: "VLABRAHAMLINCOLN",
                   textAlign: "start",
                   // Đặt font chữ tùy chỉnh
@@ -184,7 +184,7 @@ export default function CandateOneDetail() {
                 fontSize={isMobile ? "15px" : "30px"}
                 fontWeight="bold"
                 sx={{
-                  color: "#B83490",
+                  color: "white",
                   fontFamily: "VLABRAHAMLINCOLN",
                   textAlign: "start", // Đặt font chữ tùy chỉnh
                 }}
@@ -215,7 +215,7 @@ export default function CandateOneDetail() {
                   {
                     <IconButton
                       sx={{
-                        color: "#B83490",
+                        color: "#FF4267",
                       }}
                     >
                       {getIcon("mdi:fire")}
@@ -239,10 +239,10 @@ export default function CandateOneDetail() {
                   justifyContent="space-between"
                 >
                   {
-                    <Typography level="body" sx={{ fontWeight: "md", color: "#B83490" }}>
+                    <Typography level="body" sx={{ fontWeight: "md", color: "white" }}>
                       {
                         <IconButton disabled>
-                          <Favorite sx={{ color: "#D44FAC" }} /> {detailCandate.score}
+                          <Favorite sx={{ color: "#FF4267" }} /> {detailCandate.score}
                         </IconButton>
                       }
                     </Typography>
@@ -258,7 +258,7 @@ export default function CandateOneDetail() {
                     }}
                     sx={{
                       borderRadius: "50%",
-                      backgroundColor: voted ? "#FFA500" : "#D44FAC",
+                      backgroundColor: voted ? "#FFA500" : "#FF4267",
                       width: "2rem",
                       height: "2rem",
                     }}

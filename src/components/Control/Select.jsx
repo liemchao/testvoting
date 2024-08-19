@@ -9,6 +9,15 @@ export default function Select(props) {
       sx={{
         display: "grid",
         gridTemplateColumns: { sm: "6fr 1fr" },
+        "& .MuiInputLabel-root": {
+          color: "white", // Set the label color to white
+        },
+        "& .MuiOutlinedInput-root": {
+          color: "white", // Set the default value color to white
+          "& .MuiOutlinedInput-notchedOutline": {
+            borderColor: "white", // Set the border color to white
+          },
+        },
       }}
     >
       <InputLabel>{label}</InputLabel>

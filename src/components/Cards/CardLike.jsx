@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import AspectRatio from "@mui/joy/AspectRatio";
 import CardContent from "@mui/joy/CardContent";
 import CardOverflow from "@mui/joy/CardOverflow";
@@ -10,8 +10,11 @@ import Favorite from "@mui/icons-material/Favorite";
 import ShareIcon from "@mui/icons-material/Share";
 import CandateDetail from "layouts/page/user/Candidate/DetailCandidate";
 import { Card } from "@mui/joy";
+import { useMediaQuery, useTheme } from "@mui/material";
 
 export default function CardLike(props) {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   const MAX_DESCRIPTION_LENGTH = 30;
   const [showFullDescription, setShowFullDescription] = useState(false);
   const [open, setOpen] = useState(false);
@@ -32,6 +35,21 @@ export default function CardLike(props) {
     setShowFullDescription(true);
   };
 
+  const [is125Percent, setIs125Percent] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIs125Percent(window.innerWidth <= 1250);
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   const truncateDescription = (text, length) => {
     if (!text) {
       return (
@@ -41,7 +59,7 @@ export default function CardLike(props) {
             level="body"
             sx={{ mt: 0.2, fontWeight: "md", color: "#B83490" }}
           >
-            "Học như chinh phục người yêu, cứ dành thời gian cho
+            "Học như chinh phục người yêu,ssss
           </Typography>
         </>
       );
@@ -61,7 +79,7 @@ export default function CardLike(props) {
 
   return (
     <>
-      <Card variant="outlined" sx={{ width: 350 }}>
+      <Card variant="outlined" sx={{ width: isMobile ? 350 : is125Percent ? 290 : 350 }}>
         <CardOverflow>
           <AspectRatio ratio="1">
             {image ? (
@@ -191,7 +209,7 @@ export default function CardLike(props) {
                 whiteSpace: "nowrap",
                 overflow: "hidden",
                 textOverflow: "ellipsis",
-                fontSize: "15px",
+                fontSize: groupName.length > 30 ? "13px" : "15px",
                 color: "white",
               }}
             >

@@ -240,7 +240,7 @@ const navConfig6 = [
   {
     title: "Top 10 in 2023",
     path: "/user/silde10top",
-    icon: getIcon("icon-park:list-top"),
+    icon: getIcon("eva:person-fill"),
   },
   // {
   //   title: "Top 10",

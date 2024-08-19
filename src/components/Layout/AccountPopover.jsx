@@ -129,6 +129,12 @@ export default function AccountPopover() {
         anchorEl={open}
         onClose={handleCloseNotion}
         sx={{
+          backgroundImage: `url("${"https://res.cloudinary.com/ddrq4bfkk/image/upload/f_auto,q_auto/v1/2024/w7laacajw71xpbvsmvue"}")`,
+          overflow: "hidden",
+          backgroundColor: "transparent",
+
+          backgroundSize: "100% 100%",
+          backgroundPosition: "center",
           p: 0,
           mt: 1.5,
           ml: -5,
@@ -143,7 +149,7 @@ export default function AccountPopover() {
             variant="h8"
             fontWeight="bold"
             sx={{
-              color: "black",
+              color: "white",
               fontFamily: "UTM Swiss Condensed Regular", // Đặt font chữ tùy chỉnh
             }}
             noWrap
@@ -154,7 +160,7 @@ export default function AccountPopover() {
             variant="h6"
             fontWeight="bold"
             sx={{
-              color: "black",
+              color: "white",
               //   color: design.textColor,
               fontFamily: "UTM Swiss Condensed Regular", // Đặt font chữ tùy chỉnh
             }}
@@ -174,7 +180,7 @@ export default function AccountPopover() {
               component={RouterLink}
               onClick={handleCloseNotion}
               sx={{
-                color: "black",
+                color: "white",
                 // color: design.textColor,
                 fontFamily: "UTM Swiss Condensed Regular",
                 fontWeight: "bold",
@@ -195,14 +201,14 @@ export default function AccountPopover() {
             variant="h6"
             fontWeight="bold"
             sx={{
-              color: "black",
+              color: "white",
               //   color: design.textColor,
               fontFamily: "UTM Swiss Condensed Regular", // Đặt font chữ tùy chỉnh
             }}
           >
             Đăng xuất
           </Typography>
-          <LogoutIcon sx={{ marginLeft: 2, color: "black" }} />
+          <LogoutIcon sx={{ marginLeft: 2, color: "white" }} />
         </MenuItem>
       </MenuPopover>
     </>

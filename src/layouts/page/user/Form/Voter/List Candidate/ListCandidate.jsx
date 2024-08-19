@@ -72,6 +72,20 @@ export default function ListCandidate() {
     }),
     "&.Mui-focused": { width: 320, boxShadow: "0.7 rem" },
   }));
+  const [is125Percent, setIs125Percent] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIs125Percent(window.innerWidth <= 1250);
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   useEffect(() => {
     const callAPI = async () => {
@@ -478,9 +492,6 @@ export default function ListCandidate() {
         backgroundImage:
           "url(https://res.cloudinary.com/ddrq4bfkk/image/upload/f_auto,q_auto/v1/2024/ijbissnt3d2gu1gru8zc)",
         backgroundColor: "transparent",
-
-        backgroundSize: "100% 100%",
-        backgroundPosition: "center",
       }}
     >
       <Container>
@@ -492,6 +503,7 @@ export default function ListCandidate() {
                   variant="h4"
                   fontWeight="bold"
                   sx={{
+                    backgroundColor: "transparent",
                     fontSize: "30px",
                     color: "#B83490",
                     fontFamily: "UTM Swiss Condensed Regular", // Đặt font chữ tùy chỉnh
@@ -504,8 +516,14 @@ export default function ListCandidate() {
                   variant="h4"
                   fontWeight="bold"
                   sx={{
+                    backgroundImage: `url("${"https://res.cloudinary.com/ddrq4bfkk/image/upload/f_auto,q_auto/v1/2024/w7laacajw71xpbvsmvue"}")`,
+                    overflow: "hidden",
+                    backgroundColor: "transparent",
+                    backgroundSize: "100% 100%",
+                    backgroundPosition: "center",
                     fontSize: isMobile ? "20px" : "40px",
-                    color: "black",
+                    borderRadius: "10px",
+                    color: "white",
                     fontFamily: "UTM Swiss Condensed Regular", // Đặt font chữ tùy chỉnh
                   }}
                 >
@@ -583,7 +601,38 @@ export default function ListCandidate() {
                 <Box>
                   <TextField
                     size="small"
-                    sx={{ padding: isMobile ? "1px" : "0px" }}
+                    sx={{
+                      padding: isMobile ? "1px" : "0px",
+                      "& label": {
+                        color: "white",
+                      },
+                      "& label.Mui-focused": {
+                        color: "white",
+                      },
+                      "& .MuiInput-underline:after": {
+                        borderBottomColor: "white",
+                      },
+                      "& .MuiOutlinedInput-root": {
+                        "& fieldset": {
+                          borderColor: "white",
+                        },
+                        "&:hover fieldset": {
+                          borderColor: "white",
+                        },
+                        "&.Mui-focused fieldset": {
+                          borderColor: "white",
+                        },
+                        "& input": {
+                          color: "white",
+                        },
+                        "&::placeholder": {
+                          color: "white",
+                        },
+                        "&.Mui-focused input": {
+                          color: "white",
+                        },
+                      },
+                    }}
                     variant="outlined"
                     label="Nhóm môn chung"
                     value={
@@ -619,6 +668,37 @@ export default function ListCandidate() {
                 lg={isMobile ? 1 : 2}
               >
                 <TextField
+                  sx={{
+                    "& label": {
+                      color: "white",
+                    },
+                    "& label.Mui-focused": {
+                      color: "white",
+                    },
+                    "& .MuiInput-underline:after": {
+                      borderBottomColor: "white",
+                    },
+                    "& .MuiOutlinedInput-root": {
+                      "& fieldset": {
+                        borderColor: "white",
+                      },
+                      "&:hover fieldset": {
+                        borderColor: "white",
+                      },
+                      "&.Mui-focused fieldset": {
+                        borderColor: "white",
+                      },
+                      "& input": {
+                        color: "white",
+                      },
+                      "&::placeholder": {
+                        color: "white",
+                      },
+                      "&.Mui-focused input": {
+                        color: "white",
+                      },
+                    },
+                  }}
                   size="small"
                   inputProps={{ "aria-label": "search candidate" }}
                   id="outlined-basic"
@@ -670,6 +750,37 @@ export default function ListCandidate() {
               >
                 <Box>
                   <TextField
+                    sx={{
+                      "& label": {
+                        color: "white",
+                      },
+                      "& label.Mui-focused": {
+                        color: "white",
+                      },
+                      "& .MuiInput-underline:after": {
+                        borderBottomColor: "white",
+                      },
+                      "& .MuiOutlinedInput-root": {
+                        "& fieldset": {
+                          borderColor: "white",
+                        },
+                        "&:hover fieldset": {
+                          borderColor: "white",
+                        },
+                        "&.Mui-focused fieldset": {
+                          borderColor: "white",
+                        },
+                        "& input": {
+                          color: "white",
+                        },
+                        "&::placeholder": {
+                          color: "white",
+                        },
+                        "&.Mui-focused input": {
+                          color: "white",
+                        },
+                      },
+                    }}
                     size="small"
                     variant="outlined"
                     label="Chuyên ngành"
@@ -784,6 +895,37 @@ export default function ListCandidate() {
                 lg={isMobile ? 1 : 2}
               >
                 <TextField
+                  sx={{
+                    "& label": {
+                      color: "white",
+                    },
+                    "& label.Mui-focused": {
+                      color: "white",
+                    },
+                    "& .MuiInput-underline:after": {
+                      borderBottomColor: "white",
+                    },
+                    "& .MuiOutlinedInput-root": {
+                      "& fieldset": {
+                        borderColor: "white",
+                      },
+                      "&:hover fieldset": {
+                        borderColor: "white",
+                      },
+                      "&.Mui-focused fieldset": {
+                        borderColor: "white",
+                      },
+                      "& input": {
+                        color: "white",
+                      },
+                      "&::placeholder": {
+                        color: "white",
+                      },
+                      "&.Mui-focused input": {
+                        color: "white",
+                      },
+                    },
+                  }}
                   size="small"
                   inputProps={{ "aria-label": "search candidate" }}
                   id="outlined-basic"
@@ -863,6 +1005,37 @@ export default function ListCandidate() {
               >
                 <Box>
                   <TextField
+                    sx={{
+                      "& label": {
+                        color: "white",
+                      },
+                      "& label.Mui-focused": {
+                        color: "white",
+                      },
+                      "& .MuiInput-underline:after": {
+                        borderBottomColor: "white",
+                      },
+                      "& .MuiOutlinedInput-root": {
+                        "& fieldset": {
+                          borderColor: "white",
+                        },
+                        "&:hover fieldset": {
+                          borderColor: "white",
+                        },
+                        "&.Mui-focused fieldset": {
+                          borderColor: "white",
+                        },
+                        "& input": {
+                          color: "white",
+                        },
+                        "&::placeholder": {
+                          color: "white",
+                        },
+                        "&.Mui-focused input": {
+                          color: "white",
+                        },
+                      },
+                    }}
                     size="small"
                     variant="outlined"
                     label="Nhóm môn chung"
@@ -890,6 +1063,37 @@ export default function ListCandidate() {
                 lg={isMobile ? 1 : 2}
               >
                 <TextField
+                  sx={{
+                    "& label": {
+                      color: "white",
+                    },
+                    "& label.Mui-focused": {
+                      color: "white",
+                    },
+                    "& .MuiInput-underline:after": {
+                      borderBottomColor: "white",
+                    },
+                    "& .MuiOutlinedInput-root": {
+                      "& fieldset": {
+                        borderColor: "white",
+                      },
+                      "&:hover fieldset": {
+                        borderColor: "white",
+                      },
+                      "&.Mui-focused fieldset": {
+                        borderColor: "white",
+                      },
+                      "& input": {
+                        color: "white",
+                      },
+                      "&::placeholder": {
+                        color: "white",
+                      },
+                      "&.Mui-focused input": {
+                        color: "white",
+                      },
+                    },
+                  }}
                   size="small"
                   inputProps={{ "aria-label": "search candidate" }}
                   id="outlined-basic"
@@ -960,6 +1164,37 @@ export default function ListCandidate() {
                 }}
               >
                 <TextField
+                  sx={{
+                    "& label": {
+                      color: "white",
+                    },
+                    "& label.Mui-focused": {
+                      color: "white",
+                    },
+                    "& .MuiInput-underline:after": {
+                      borderBottomColor: "white",
+                    },
+                    "& .MuiOutlinedInput-root": {
+                      "& fieldset": {
+                        borderColor: "white",
+                      },
+                      "&:hover fieldset": {
+                        borderColor: "white",
+                      },
+                      "&.Mui-focused fieldset": {
+                        borderColor: "white",
+                      },
+                      "& input": {
+                        color: "white",
+                      },
+                      "&::placeholder": {
+                        color: "white",
+                      },
+                      "&.Mui-focused input": {
+                        color: "white",
+                      },
+                    },
+                  }}
                   variant="outlined"
                   label="Số phiếu hiện có"
                   value={
@@ -985,6 +1220,37 @@ export default function ListCandidate() {
                 }}
               >
                 <TextField
+                  sx={{
+                    "& label": {
+                      color: "white",
+                    },
+                    "& label.Mui-focused": {
+                      color: "white",
+                    },
+                    "& .MuiInput-underline:after": {
+                      borderBottomColor: "white",
+                    },
+                    "& .MuiOutlinedInput-root": {
+                      "& fieldset": {
+                        borderColor: "white",
+                      },
+                      "&:hover fieldset": {
+                        borderColor: "white",
+                      },
+                      "&.Mui-focused fieldset": {
+                        borderColor: "white",
+                      },
+                      "& input": {
+                        color: "white",
+                      },
+                      "&::placeholder": {
+                        color: "white",
+                      },
+                      "&.Mui-focused input": {
+                        color: "white",
+                      },
+                    },
+                  }}
                   inputProps={{ "aria-label": "search candidate" }}
                   id="outlined-basic"
                   value={title}
@@ -1004,11 +1270,11 @@ export default function ListCandidate() {
           <Box
             sx={{
               display: "flex",
-              justifyContent: "space-between",
-              ml: isMobile ? "-0.7rem" : "-0.3rem",
+              justifyContent: isMobile ? "center" : "space-between",
+              ml: isMobile ? "-0.3rem" : "-0.5rem",
             }}
           >
-            <Grid container spacing={3} mt={-2} bottom={1} sx={{ gap: "6rem" }}>
+            <Grid container spacing={3} mt={-2} bottom={1} sx={{ gap: "5rem" }}>
               {getCurrentCandidates()?.map((card, index) => (
                 <Grid item xs={6} md={3} key={index}>
                   <CardLike
