@@ -238,10 +238,27 @@ const navConfig6 = [
   },
 
   {
-    title: "Top 10 in 2023",
-    path: "/user/sildetop/10",
-    icon: getIcon("eva:person-fill"),
+    title: "Lịch sử top 10",
+    icon: getIcon("solar:ranking-bold-duotone"),
+    subItems: [
+      {
+        title: "Năm 2023",
+        subPath: "/user/sildetop/10",
+        icons: getIcon("solar:ranking-outline"),
+      },
+      // {
+      //   title: "Năm 2024 (Đang diễn ra)",
+      //   subPath: "/user/null",
+      //   icons: getIcon("solar:ranking-outline"),
+      // },
+    ],
   },
+
+  // {
+  //   title: "Top 10 in 2023",
+  //   path: "/user/sildetop/10",
+  //   icon: getIcon("eva:person-fill"),
+  // },
   // {
   //   title: "Top 10",
   //   path: "/user/top10",
