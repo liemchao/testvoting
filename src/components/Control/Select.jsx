@@ -2,7 +2,8 @@ import React from "react";
 import { FormControl, InputLabel, Select as MuiSelect, MenuItem } from "@mui/material";
 
 export default function Select(props) {
-  const { name, label, value, onChange, options, defaultValue, sx, size, disabled } = props;
+  const { name, label, value, onChange, options, defaultValue, sx, size, disabled, colorbg } =
+    props;
 
   return (
     <FormControl
@@ -10,12 +11,12 @@ export default function Select(props) {
         display: "grid",
         gridTemplateColumns: { sm: "6fr 1fr" },
         "& .MuiInputLabel-root": {
-          color: "white", // Set the label color to white
+          color: colorbg, // Set the label color to white
         },
         "& .MuiOutlinedInput-root": {
-          color: "white", // Set the default value color to white
+          color: colorbg, // Set the default value color to white
           "& .MuiOutlinedInput-notchedOutline": {
-            borderColor: "white", // Set the border color to white
+            borderColor: colorbg, // Set the border color to white
           },
         },
       }}

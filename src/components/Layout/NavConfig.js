@@ -239,7 +239,7 @@ const navConfig6 = [
 
   {
     title: "Top 10 in 2023",
-    path: "/user/silde10top",
+    path: "/user/sildetop/10",
     icon: getIcon("eva:person-fill"),
   },
   // {

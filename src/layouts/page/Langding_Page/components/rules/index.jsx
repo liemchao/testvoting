@@ -180,7 +180,7 @@ const VotingRules = () => {
                       <Grid item>
                         <FavoriteIcon
                           sx={{
-                            color: "#005F8A",
+                            color: "#EBB600",
                             fontSize: 30,
                             "@media (max-width: 600px)": {
                               fontSize: "1.2rem",
@@ -192,7 +192,7 @@ const VotingRules = () => {
                       <Grid item>
                         <FavoriteIcon
                           sx={{
-                            color: "#005F8A",
+                            color: "#EBB600",
                             fontSize: 30,
                             "@media (max-width: 600px)": {
                               fontSize: "1.2rem",
@@ -204,7 +204,7 @@ const VotingRules = () => {
                       <Grid item>
                         <FavoriteIcon
                           sx={{
-                            color: "#005F8A",
+                            color: "#EBB600",
                             fontSize: 30,
                             "@media (max-width: 600px)": {
                               fontSize: "1.2rem",
@@ -316,7 +316,7 @@ const VotingRules = () => {
                       <Grid item>
                         <FavoriteIcon
                           sx={{
-                            color: "#005F8A",
+                            color: "#EBB600",
                             fontSize: 30,
                             "@media (max-width: 600px)": {
                               fontSize: "1.2rem",
@@ -360,7 +360,7 @@ const VotingRules = () => {
                       <Grid item>
                         <FavoriteIcon
                           sx={{
-                            color: "#005F8A",
+                            color: "#EBB600",
                             fontSize: 30,
                             "@media (max-width: 600px)": {
                               fontSize: "1.2rem",
@@ -372,7 +372,7 @@ const VotingRules = () => {
                       <Grid item>
                         <FavoriteIcon
                           sx={{
-                            color: "#005F8A",
+                            color: "#EBB600",
                             fontSize: 30,
                             "@media (max-width: 600px)": {
                               fontSize: "1.2rem",
@@ -502,7 +502,7 @@ const VotingRules = () => {
                       <Grid item>
                         <FavoriteIcon
                           sx={{
-                            color: "#005F8A",
+                            color: "#EBB600",
                             fontSize: 30,
                             "@media (max-width: 600px)": {
                               fontSize: "1.2rem",
@@ -514,7 +514,7 @@ const VotingRules = () => {
                       <Grid item>
                         <FavoriteIcon
                           sx={{
-                            color: "#005F8A",
+                            color: "#EBB600",
                             fontSize: 30,
                             "@media (max-width: 600px)": {
                               fontSize: "1.2rem",
@@ -526,7 +526,7 @@ const VotingRules = () => {
                       <Grid item>
                         <FavoriteIcon
                           sx={{
-                            color: "#005F8A",
+                            color: "#EBB600",
                             fontSize: 30,
                             "@media (max-width: 600px)": {
                               fontSize: "1.2rem",

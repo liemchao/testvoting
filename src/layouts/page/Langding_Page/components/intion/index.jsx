@@ -158,41 +158,25 @@ export default function Section3() {
                     <Typography
                       level="body"
                       fontWeight="normal"
-                      fontSize={isMobile ? "15px" : is125Percent ? "20px" : "27px"} // Kích thước font chữ thay đổi khi trên web hoặc mobile
+                      fontSize={isMobile ? "15px" : is125Percent ? "20px" : "27px"}
                       sx={{
                         marginLeft: "2rem",
                         color: designhome.textColor,
                         fontFamily: "UTM Swiss Condensed Regular",
-                        // Đặt font chữ tùy chỉnh
                         marginTop: isMobile ? "0.3rem" : "0rem",
-                        textAlign: "start", // Căn giữa nội dung
-                        textIndent: isMobile ? "-1.5rem" : "0.1rem",
+                        textAlign: "start",
                       }}
                     >
-                      <li>
-                        Top 10 giảng viên đạt danh hiệu{" "}
-                        <strong>"Inspiring Instructor Awards"</strong> sẽ được vinh danh trong buổi
-                        lễ trang trọng tại Đại học FPT campus Thành phố Hồ Chí Minh.
-                      </li>
-                      <li>
-                        Trao tặng<strong> bộ quà tặng danh riêng cho danh hiệu này.</strong>
-                      </li>
-                      {/* {designhome.description4?.split(".").map((sentence, index) => {
-                        console.log(sentence);
-                        return (
-                          <React.Fragment>
-                            {index > 0} 
-                            {sentence}
-                            <br /> 
-                          </React.Fragment>
-                        );
-                      })} */}
-
-                      {/* <li>
-                        Top 10 giảng viên đạt danh hiệu{" "}
-                        <strong>"Inspiring Instructor Awards"</strong> sẽ được vinh danh tại ngày
-                        hội Convocation Day.
-                      </li> */}
+                      <ul>
+                        <li>
+                          Top 10 giảng viên đạt danh hiệu{" "}
+                          <strong>"Inspiring Instructor Awards"</strong> sẽ được vinh danh trong
+                          ngày hội Convocation Day tại Đại học FPT cơ sở Hồ Chí Minh.
+                        </li>
+                        <li>
+                          Trao tặng <strong>bộ quà tặng dành riêng cho danh hiệu này.</strong>
+                        </li>
+                      </ul>
                     </Typography>
                   </div>
                 </Sheet>

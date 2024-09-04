@@ -158,7 +158,7 @@ export default function CandateOneDetail() {
                 src={
                   detailCandate.avatarUrl !== null && detailCandate.avatarUrl !== undefined
                     ? detailCandate.avatarUrl
-                    : "https://st.quantrimang.com/photos/image/072015/22/avatar.jpg"
+                    : "https://res.cloudinary.com/ddrq4bfkk/image/upload/f_auto,q_auto/v1/2024/pgdhzmxv9v4bycophxys"
                 }
                 style={{
                   width: "80%",
@@ -191,19 +191,20 @@ export default function CandateOneDetail() {
               >
                 {detailCandate.groupName}
               </Typography>
-              {detailCandate.description ? (
+              {detailCandate.description === "NULL" ? (
+                <></>
+              ) : (
                 <Typography
                   variant="body2"
                   fontSize={isMobile ? "20px" : "30px"}
                   sx={{
+                    color: "white",
                     fontFamily: "VLABRAHAMLINCOLN",
                     textAlign: "start", // Đặt font chữ tùy chỉnh
                   }}
                 >
                   "{detailCandate.description}".
                 </Typography>
-              ) : (
-                <></>
               )}
               {detailCandate.formId ? (
                 <Box

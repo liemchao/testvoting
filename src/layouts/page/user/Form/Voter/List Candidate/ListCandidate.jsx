@@ -573,6 +573,7 @@ export default function ListCandidate() {
                 lg={3}
               >
                 <Select
+                  colorbg="white"
                   sx={{
                     whiteSpace: "nowrap",
                     overflow: "hidden",
@@ -722,6 +723,7 @@ export default function ListCandidate() {
                 lg={2.5}
               >
                 <Select
+                  colorbg="white"
                   sx={{
                     whiteSpace: "nowrap",
                     overflow: "hidden",
@@ -810,6 +812,7 @@ export default function ListCandidate() {
                 lg={1}
               >
                 <Select
+                  colorbg="white"
                   sx={{
                     whiteSpace: "nowrap",
                     overflow: "hidden",
@@ -840,6 +843,7 @@ export default function ListCandidate() {
                 lg={4}
               >
                 <Select
+                  colorbg="white"
                   sx={{
                     whiteSpace: "nowrap",
                     overflow: "hidden",
@@ -868,6 +872,37 @@ export default function ListCandidate() {
               >
                 <Box>
                   <TextField
+                    sx={{
+                      "& label": {
+                        color: "white",
+                      },
+                      "& label.Mui-focused": {
+                        color: "white",
+                      },
+                      "& .MuiInput-underline:after": {
+                        borderBottomColor: "white",
+                      },
+                      "& .MuiOutlinedInput-root": {
+                        "& fieldset": {
+                          borderColor: "white",
+                        },
+                        "&:hover fieldset": {
+                          borderColor: "white",
+                        },
+                        "&.Mui-focused fieldset": {
+                          borderColor: "white",
+                        },
+                        "& input": {
+                          color: "white",
+                        },
+                        "&::placeholder": {
+                          color: "white",
+                        },
+                        "&.Mui-focused input": {
+                          color: "white",
+                        },
+                      },
+                    }}
                     size="small"
                     variant="outlined"
                     label="Chuyên ngành"
@@ -948,6 +983,7 @@ export default function ListCandidate() {
                 lg={1.5}
               >
                 <Select
+                  colorbg="white"
                   sx={{
                     whiteSpace: "nowrap",
                     overflow: "hidden",
@@ -977,6 +1013,7 @@ export default function ListCandidate() {
                 lg={4}
               >
                 <Select
+                  colorbg="white"
                   sx={{
                     whiteSpace: "nowrap",
                     overflow: "hidden",
@@ -1116,6 +1153,7 @@ export default function ListCandidate() {
                 lg={1.5}
               >
                 <Select
+                  colorbg="white"
                   sx={{
                     whiteSpace: "nowrap",
                     overflow: "hidden",
@@ -1136,6 +1174,7 @@ export default function ListCandidate() {
           ) : (
             <>
               <Select
+                colorbg="white"
                 sx={{
                   display: "flex",
                   justifyContent: "flex-end",
@@ -1274,7 +1313,13 @@ export default function ListCandidate() {
               ml: isMobile ? "-0.3rem" : "-0.5rem",
             }}
           >
-            <Grid container spacing={3} mt={-2} bottom={1} sx={{ gap: "5rem" }}>
+            <Grid
+              container
+              spacing={3}
+              mt={-2}
+              bottom={1}
+              sx={{ gap: is125Percent ? "5rem" : "6rem" }}
+            >
               {getCurrentCandidates()?.map((card, index) => (
                 <Grid item xs={6} md={3} key={index}>
                   <CardLike
@@ -1311,8 +1356,8 @@ export default function ListCandidate() {
             pb: 3,
             mt: 1,
           }}
-          backgroundColor="secondary"
-          color="secondary"
+          backgroundColor="primary"
+          color="primary"
           count={totalPages}
           page={currentPage}
           onChange={handlePageChange}

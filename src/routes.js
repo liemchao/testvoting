@@ -138,7 +138,7 @@ export default function Router() {
           element: <ListForm />,
         },
         {
-          path: "silde10top",
+          path: "sildetop/:id",
           element: <SildeTop10 />,
         },
         {

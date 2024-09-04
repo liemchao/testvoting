@@ -31,8 +31,8 @@ export default function CustomizedSteppers() {
           variant="body1"
           sx={{
             position: "absolute",
-            bottom: "10%",
-            left: "10.5%",
+            bottom: "15%",
+            left: "11.2%",
             color: design.textColor,
             fontFamily: "UTM Swiss Condensed Regular",
             fontSize: 17,
@@ -50,8 +50,8 @@ export default function CustomizedSteppers() {
           fontWeight="bold"
           sx={{
             position: "absolute",
-            bottom: "15%",
-            left: "10%",
+            bottom: "20%",
+            left: "11%",
             color: design.textColor,
             fontFamily: "UTM Swiss Condensed Regular",
             fontSize: 30,
@@ -68,8 +68,8 @@ export default function CustomizedSteppers() {
           variant="body1"
           sx={{
             position: "absolute",
-            bottom: "51%",
-            left: "28.5%",
+            bottom: "56%",
+            left: "28%",
             color: design.textColor,
             fontFamily: "UTM Swiss Condensed Regular",
             fontSize: 16,
@@ -87,7 +87,7 @@ export default function CustomizedSteppers() {
           fontWeight="bold"
           sx={{
             position: "absolute",
-            bottom: "55%",
+            bottom: "62%",
             left: "28%",
             color: design.textColor,
             fontFamily: "UTM Swiss Condensed Regular",
@@ -105,8 +105,8 @@ export default function CustomizedSteppers() {
           variant="body1"
           sx={{
             position: "absolute",
-            bottom: "-9%",
-            left: "49%",
+            bottom: "-7%",
+            left: "50%",
             color: design.textColor,
             fontFamily: "UTM Swiss Condensed Regular",
             fontSize: 17,
@@ -124,8 +124,8 @@ export default function CustomizedSteppers() {
           fontWeight="bold"
           sx={{
             position: "absolute",
-            bottom: "-5%",
-            left: "48%",
+            bottom: "-1%",
+            left: "49%",
             color: design.textColor,
             fontFamily: "UTM Swiss Condensed Regular",
             fontSize: 30,
@@ -142,8 +142,8 @@ export default function CustomizedSteppers() {
           variant="body1"
           sx={{
             position: "absolute",
-            bottom: "39%",
-            left: "73%",
+            bottom: "42%",
+            left: "74%",
             color: design.textColor,
             fontFamily: "UTM Swiss Condensed Regular",
             fontSize: 17,
@@ -161,8 +161,8 @@ export default function CustomizedSteppers() {
           fontWeight="bold"
           sx={{
             position: "absolute",
-            bottom: "43%",
-            left: "72%",
+            bottom: "48%",
+            left: "73%",
             color: design.textColor,
             fontFamily: "UTM Swiss Condensed Regular",
             fontSize: 30,

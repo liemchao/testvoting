@@ -60,11 +60,11 @@ export default function DashboardSidebar({ isOpenSidebar, onCloseSidebar }) {
 
   const isDesktop = useResponsive("up", "lg");
 
-  useEffect(() => {
-    if (isOpenSidebar) {
-      onCloseSidebar();
-    }
-  }, [pathname]);
+  // useEffect(() => {
+  //   if (isOpenSidebar) {
+  //     onCloseSidebar();
+  //   }
+  // }, [pathname]);
 
   const renderContent = (
     // <Scrollbar
@@ -98,7 +98,10 @@ export default function DashboardSidebar({ isOpenSidebar, onCloseSidebar }) {
           open={isOpenSidebar}
           onClose={onCloseSidebar}
           PaperProps={{
-            sx: { width: DRAWER_WIDTH },
+            sx: {
+              width: DRAWER_WIDTH,
+              backgroundImage: `url("${"https://res.cloudinary.com/ddrq4bfkk/image/upload/f_auto,q_auto/v1/2024/w7laacajw71xpbvsmvue"}")`,
+            },
           }}
         >
           {renderContent}

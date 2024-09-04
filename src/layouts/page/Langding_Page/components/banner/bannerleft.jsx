@@ -195,13 +195,13 @@ export default function MyComponent() {
                         {/* {designhome.description1} */}
                         <li>
                           Danh hiệu <strong>"Inspiring Instructor Awards"</strong> nhằm tôn vinh
-                          những nỗ lực, cống hiến của Giảng viên trong hành trình trao truyền kiến
-                          thức và cảm hứng đến sinh viên
+                          những nỗ lực, cống hiến của Giảng viên trong hành trình trao kiến thức và
+                          truyền cảm hứng đến sinh viên
                           <strong> FPTU HCMC.</strong>
                         </li>
                         <li>
                           Đây là danh hiệu được bình chọn định kỳ hằng năm và dành cho tất cả giảng
-                          viên dạy ở 3 học kì gần nhất của thời điểm đó:
+                          viên dạy ở 3 học kỳ trong năm học đó:
                           <strong> Fall, Spring, Summer.</strong>
                         </li>
                       </Typography>
@@ -321,17 +321,19 @@ export default function MyComponent() {
                           textAlign: "start", // Căn giữa nội dung
                         }}
                       >
-                        <li>
-                          Danh hiệu <strong>"Inspiring Instructor Awards"</strong> nhằm tôn vinh
-                          những nỗ lực, cống hiến của Giảng viên trong hành trình trao truyền kiến
-                          thức và cảm hứng đến sinh viên
-                          <strong> FPTU HCMC.</strong>
-                        </li>
-                        <li>
-                          Đây là danh hiệu được bình chọn định kỳ hằng năm và dành cho tất cả giảng
-                          viên dạy ở 3 học kì gần nhất của thời điểm đó:
-                          <strong> Fall, Spring, Summer.</strong>
-                        </li>
+                        <ul>
+                          <li>
+                            Danh hiệu <strong>"Inspiring Instructor Awards"</strong> nhằm tôn vinh
+                            những nỗ lực, cống hiến của Giảng viên trong hành trình trao kiến thức
+                            và truyền cảm hứng đến sinh viên
+                            <strong> FPTU HCMC.</strong>
+                          </li>
+                          <li>
+                            Đây là danh hiệu được bình chọn định kỳ hằng năm và dành cho tất cả
+                            giảng viên dạy ở 3 học kỳ trong năm học đó:
+                            <strong> Fall, Spring, Summer.</strong>
+                          </li>
+                        </ul>
                         {/* {designhome.description1?.split(".").map((sentence, index) => (
                           <React.Fragment key={index}>
                             {index > 0} 

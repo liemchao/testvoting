@@ -77,7 +77,7 @@ export default function AppbarDesktop({ matches }) {
         />
       </MyList>
       {token ? (
-        <>
+        <Box sx={{ marginTop: "1rem" }}>
           <IconButton
             ref={anchorRef}
             onClick={handleOpen}
@@ -102,6 +102,7 @@ export default function AppbarDesktop({ matches }) {
               sx={{
                 zIndex: "modal",
                 position: "absolute",
+                color: "white",
                 left: `${hanldenullToken()[0]?.Username?.length * 0.03}%`,
                 // left: 3,
               }}
@@ -117,7 +118,9 @@ export default function AppbarDesktop({ matches }) {
                 marginRight: "2%",
               }}
             >
-              <Typography variant="h5">{hanldenullToken()[0]?.Username}</Typography>
+              <Typography color={"white"} variant="h5">
+                {hanldenullToken()[0]?.Username}
+              </Typography>
             </Box>
           </IconButton>
 
@@ -169,7 +172,7 @@ export default function AppbarDesktop({ matches }) {
               <LogoutIcon sx={{ marginLeft: 2 }} />
             </MenuItem>
           </MenuPopover>
-        </>
+        </Box>
       ) : (
         <>
           <Actions matches={matches} />

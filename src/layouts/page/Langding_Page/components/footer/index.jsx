@@ -91,7 +91,7 @@ export default function Footer() {
                   >
                     <Box sx={{ display: "flex", alignItems: "center" }}>
                       <MailOutlineIcon sx={{ marginRight: 1, marginTop: 0.5 }} />
-                      <span> anltd@fe.edu.vn </span>
+                      <span> ctsv.hcm@fpt.edu.vn </span>
                     </Box>
                   </a>
                 </Typography>

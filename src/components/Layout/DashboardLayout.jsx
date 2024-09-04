@@ -1,5 +1,5 @@
 import { useCallback, useState } from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, useParams } from "react-router-dom";
 // material
 import { styled } from "@mui/material/styles";
 //
@@ -18,6 +18,7 @@ const APP_BAR_DESKTOP = 92;
 // ----------------------------------------------------------------------
 
 export default function DashboardLayout() {
+  const { id } = useParams();
   const design = useSelector((state) => {
     return state.design;
   });
@@ -26,7 +27,10 @@ export default function DashboardLayout() {
     display: "flex",
     minHeight: "100%",
     overflow: "hidden",
-    backgroundImage: `url("https://res.cloudinary.com/ddrq4bfkk/image/upload/f_auto,q_auto/v1/2024/ijbissnt3d2gu1gru8zc")`,
+    backgroundImage:
+      id == 10
+        ? `url("https://res.cloudinary.com/dxevluwyr/image/upload/v1694155547/BackGround_xhgdfp.png?fbclid=IwAR39NUtxnEeju10pZTzJFAqpQiDKjpW2are7Q_MAfYpZVf50ca-jnF-rmXo")`
+        : `url("https://res.cloudinary.com/ddrq4bfkk/image/upload/f_auto,q_auto/v1/2024/ijbissnt3d2gu1gru8zc")`,
     backgroundColor: "transparent",
 
     backgroundSize: "100% 100%",

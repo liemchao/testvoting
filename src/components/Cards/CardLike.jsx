@@ -51,7 +51,7 @@ export default function CardLike(props) {
   }, []);
 
   const truncateDescription = (text, length) => {
-    if (!text) {
+    if (text === "NULL") {
       return (
         <>
           <Typography
@@ -93,10 +93,9 @@ export default function CardLike(props) {
               />
             ) : (
               <img
-                src="https://st.quantrimang.com/photos/image/072015/22/avatar.jpg"
-                alt="ẩn thay thế"
-                width="220%"
-                height="220%"
+                src="https://res.cloudinary.com/ddrq4bfkk/image/upload/f_auto,q_auto/v1/2024/pgdhzmxv9v4bycophxys"
+                alt="ảnh thay thế"
+                style={{ maxWidth: "130%", height: "auto" }}
                 objectFit="cover"
               />
             )}
@@ -191,7 +190,7 @@ export default function CardLike(props) {
             </IconButton>
           )}
         </CardOverflow>
-        <CardOverflow sx={{ bgcolor: "#9A99A6" }}>
+        <CardOverflow sx={{ bgcolor: "#9A99A6", mt: "-0.5rem" }}>
           <Typography
             level="h2"
             fontSize="md"
@@ -223,12 +222,12 @@ export default function CardLike(props) {
             <Typography level="body3" sx={{ fontWeight: "md", color: "#B83490" }}>
               {
                 <IconButton info>
-                  <Favorite sx={{ color: "#D44FAC" }} /> {score}
+                  <Favorite sx={{ color: "#FF4267" }} /> {score}
                 </IconButton>
               }
             </Typography>
             <Divider orientation="vertical" />
-            <Typography level="body" sx={{ mt: 0.2, fontWeight: "md", color: "#B83490" }}>
+            <Typography level="body" sx={{ mt: 0.2, fontWeight: "md", color: "#929290" }}>
               {showFullDescription ? description : truncatedDescription}
               {!showFullDescription && description?.length > MAX_DESCRIPTION_LENGTH && (
                 <>

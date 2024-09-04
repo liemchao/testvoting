@@ -12,6 +12,7 @@ import NotificationsPopover from "./NotificationsPopover";
 import AccountPopover from "./AccountPopover";
 import Logo from "assets/images/full 3 logo.png";
 import { useTheme, useMediaQuery } from "@mui/material";
+import { useParams } from "react-router-dom";
 
 // ----------------------------------------------------------------------
 
@@ -33,7 +34,7 @@ const RootStyle = styled(AppBar)(({ theme }) => ({
 const ToolbarStyle = styled(Toolbar)(({ theme }) => ({
   minHeight: APPBAR_MOBILE,
   backgroundPosition: "start",
-  // width: "100%",
+  width: "100%",
   [theme.breakpoints.up("lg")]: {
     minHeight: APPBAR_DESKTOP,
     padding: theme.spacing(0, 5),
@@ -56,6 +57,7 @@ DashboardNavbar.propTypes = {
 export default function DashboardNavbar({ onOpenSidebar, open }) {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  const { id } = useParams();
   return (
     <>
       {open ? (
@@ -97,16 +99,32 @@ export default function DashboardNavbar({ onOpenSidebar, open }) {
                   flex: isMobile ? 3 : 1,
                 }}
               ></div>
-              <img
-                src="https://res.cloudinary.com/ddrq4bfkk/image/upload/f_auto,q_auto/v1/2024/txl65bqasmnaqlpjuoy9"
-                alt="Logo"
-                width={isMobile ? "auto" : "25%"}
-                height={isMobile ? "auto" : "auto"}
-                style={{
-                  mt: "2%",
-                  marginRight: "-2rem",
-                }}
-              />
+              {id == 10 ? (
+                <img
+                  src={Logo}
+                  alt="Logo"
+                  width={isMobile ? "auto" : "25%"}
+                  height={isMobile ? "auto" : "auto"}
+                  style={{
+                    mt: "2%",
+                    marginRight: "-2rem",
+                  }}
+                />
+              ) : (
+                <>
+                  <img
+                    src="https://res.cloudinary.com/ddrq4bfkk/image/upload/f_auto,q_auto/v1/2024/txl65bqasmnaqlpjuoy9"
+                    alt="Logo"
+                    width={isMobile ? "auto" : "25%"}
+                    height={isMobile ? "auto" : "auto"}
+                    style={{
+                      mt: "2%",
+                      marginRight: "-2rem",
+                    }}
+                  />
+                </>
+              )}
+
               <div style={{ flex: 1 }}></div>
             </Box>
             <Stack direction="row" alignItems="center" spacing={{ xs: 0.5, sm: 1.5 }}>

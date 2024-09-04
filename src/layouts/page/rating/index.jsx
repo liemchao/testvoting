@@ -423,7 +423,7 @@ const TopAndTable = () => {
             variant="h5"
             sx={{
               marginBottom: "16px",
-              color: "#B83490",
+              color: "white",
               fontFamily: "UTM Swiss Condensed Regular",
               fontSize: "1.7rem",
             }}
@@ -450,7 +450,7 @@ const TopAndTable = () => {
             sx={{
               marginTop: "16px",
               marginBottom: "16px",
-              color: "#B83490",
+              color: "white",
               fontFamily: "UTM Swiss Condensed Regular",
               fontSize: "1.7rem",
             }}

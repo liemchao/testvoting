@@ -330,17 +330,18 @@ export default function Select3() {
                            
                           );
                         })} */}
-
-                        <li>
-                          Chương trình dành cho tất cả sinh viên đang học tại campus
-                          <strong> FPTU HCMC.</strong>
-                        </li>
-                        <li>Sinh viên bình chọn cho giảng viên yêu thích.</li>
-                        <li>Hệ thống sẽ tính điểm theo tổng lượt bình chọn của sinh viên.</li>
-                        <li>
-                          Sau thời gian bình chọn, hệ thống lọc ra top 10 giảng viên đạt danh hiệu
-                          <strong> “Inspiring Instructor Awards”.</strong>
-                        </li>
+                        <ul>
+                          <li>
+                            Chương trình dành cho tất cả sinh viên đang học tại campus
+                            <strong> FPTU HCMC.</strong>
+                          </li>
+                          <li>Sinh viên bình chọn cho giảng viên yêu thích.</li>
+                          <li>Hệ thống sẽ tính điểm theo tổng lượt bình chọn của sinh viên.</li>
+                          <li>
+                            Sau thời gian bình chọn, hệ thống lọc ra top 10 giảng viên đạt danh hiệu
+                            <strong> “Inspiring Instructor Awards”.</strong>
+                          </li>
+                        </ul>
                       </Typography>
                       <Box
                         sx={{
