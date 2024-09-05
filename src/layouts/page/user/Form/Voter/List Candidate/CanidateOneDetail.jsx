@@ -158,7 +158,7 @@ export default function CandateOneDetail() {
                 src={
                   detailCandate.avatarUrl !== null && detailCandate.avatarUrl !== undefined
                     ? detailCandate.avatarUrl
-                    : "https://res.cloudinary.com/ddrq4bfkk/image/upload/f_auto,q_auto/v1/2024/pgdhzmxv9v4bycophxys"
+                    : "https://res.cloudinary.com/ddrq4bfkk/image/upload/f_auto,q_auto/v1/2024/pg5l7ve7r98mlaffpkuu"
                 }
                 style={{
                   width: "80%",

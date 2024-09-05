@@ -93,9 +93,10 @@ export default function CardLike(props) {
               />
             ) : (
               <img
-                src="https://res.cloudinary.com/ddrq4bfkk/image/upload/f_auto,q_auto/v1/2024/pgdhzmxv9v4bycophxys"
+                src="https://res.cloudinary.com/ddrq4bfkk/image/upload/f_auto,q_auto/v1/2024/pg5l7ve7r98mlaffpkuu"
                 alt="ảnh thay thế"
-                style={{ maxWidth: "130%", height: "auto" }}
+                width="220%"
+                height="220%"
                 objectFit="cover"
               />
             )}
