@@ -51,7 +51,7 @@ export default function CardLike(props) {
   }, []);
 
   const truncateDescription = (text, length) => {
-    if (text === "NULL") {
+    if (!text) {
       return (
         <>
           <Typography

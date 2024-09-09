@@ -79,7 +79,7 @@ export default function FeedbackBubble(props) {
       <Dialog maxWidth="lg" open={open} onClose={handleClose}>
         <DialogTitle
           sx={{
-            color: "#B83490",
+            color: "#929290",
             fontFamily: "UTM Swiss Condensed Regular",
             fontWeight: "bold",
             fontSize: isMobile ? "17px" : "30px",
@@ -101,7 +101,7 @@ export default function FeedbackBubble(props) {
               value={rating}
               onChange={handleRatingChange}
               sx={{
-                color: "#B83490",
+                color: "#EBB600",
                 fontSize: "3rem",
               }}
             />

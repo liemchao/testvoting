@@ -539,10 +539,9 @@ export default function ListCandidate() {
                     <IconButton
                       sx={{
                         marginLeft: "10px",
-                        color: "black",
+                        color: "white",
                         fontSize: "70%",
                       }}
-                      color="primary"
                       onClick={handlePolicyClick}
                     >
                       <PolicyIcon />
@@ -1334,7 +1333,7 @@ export default function ListCandidate() {
                     image={card?.avatarUrl}
                     name={card?.fullName}
                     onClickLike={() => {
-                      handleVotingLike(token, card.candidateId);
+                      handleVotingLike(token, card?.candidateId);
                     }}
                     onClickShare={() => {
                       handleGetQR(card?.candidateId);

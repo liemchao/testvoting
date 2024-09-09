@@ -38,7 +38,7 @@ export default function Policy(props) {
     >
       <Box
         sx={{
-          backgroundImage: `url("https://res.cloudinary.com/dxevluwyr/image/upload/v1694155547/BackGround_xhgdfp.png?fbclid=IwAR39NUtxnEeju10pZTzJFAqpQiDKjpW2are7Q_MAfYpZVf50ca-jnF-rmXo")`,
+          backgroundImage: `url("https://res.cloudinary.com/ddrq4bfkk/image/upload/f_auto,q_auto/v1/2024/ijbissnt3d2gu1gru8zc")`,
           backgroundSize: "cover", // Thêm thuộc tính backgroundSize với giá trị "cover"
         }}
       >
