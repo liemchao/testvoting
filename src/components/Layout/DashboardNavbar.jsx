@@ -24,8 +24,7 @@ const RootStyle = styled(AppBar)(({ theme }) => ({
   boxShadow: "none",
   backdropFilter: "blur(6px)",
   WebkitBackdropFilter: "blur(6px)", // Fix on Mobile
-  backgroundColor: alpha(theme.palette.background.default, 0.72),
-
+  backgroundColor: alpha(theme.palette.background.default, 0.72), // Change to pink if isPink is true
   [theme.breakpoints.up("lg")]: {
     width: `calc(100% - ${DRAWER_WIDTH + 1}px)`,
   },
@@ -41,11 +40,11 @@ const ToolbarStyle = styled(Toolbar)(({ theme }) => ({
   },
 }));
 
-const RootStyleClose = styled(AppBar)(({ theme }) => ({
+const RootStyleClose = styled(AppBar)(({ theme, isPink }) => ({
   boxShadow: "none",
   backdropFilter: "blur(6px)",
   WebkitBackdropFilter: "blur(6px)", // Fix on Mobile
-  backgroundColor: "#fdfdf",
+  backgroundColor: isPink ? "#F8C8F7" : "#fdfdf",
 }));
 
 // ----------------------------------------------------------------------
@@ -58,6 +57,7 @@ export default function DashboardNavbar({ onOpenSidebar, open }) {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   const { id } = useParams();
+  const isPink = id == 10; // Check if id is "10"
   return (
     <>
       {open ? (
@@ -81,7 +81,7 @@ export default function DashboardNavbar({ onOpenSidebar, open }) {
           </ToolbarStyle>
         </RootStyle>
       ) : (
-        <RootStyleClose>
+        <RootStyleClose isPink={isPink}>
           <ToolbarStyle>
             <IconButton onClick={onOpenSidebar} sx={{ mr: 1, color: "text.primary" }}>
               <Iconify icon="eva:menu-2-fill" />

@@ -55,7 +55,7 @@ export default function Section2() {
           }}
         >
           <img
-            src="https://res.cloudinary.com/ddrq4bfkk/image/upload/f_auto,q_auto/v1/2024/ekxwfu6vkdb8rxv9hhts"
+            src="https://res.cloudinary.com/ddrq4bfkk/image/upload/f_auto,q_auto/v1/2024/bekdizg3bqwbffiauchc"
             // {designhome.logo2}
             alt="Logo"
             style={{
