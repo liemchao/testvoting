@@ -43,10 +43,10 @@ import { callAPIgetListForm } from "context/redux/action/action.js";
 import UpdateFormPopup from "components/Popup/updatePopup/UpdateForm.jsx";
 import { useEffect } from "react";
 import { getFormId } from "context/redux/action/action.js";
-import ViewForm from "components/Popup/create/ViewForm.jsx";
-import PolicyOwer from "components/Popup/add/PolicyOwer.jsx";
+import ViewForm from "components/Popup/create/ViewForm.js";
+import PolicyOwer from "components/Popup/add/PolicyOwer.js";
 import { useCallback } from "react";
-import AppoveForm from "components/Popup/add/AppoveForm.jsx";
+import AppoveForm from "components/Popup/add/AppoveForm.js";
 import ButtonLangding from "assets/theme/components/button/ButtonLangding.jsx";
 // ----------------------------------------------------------------------
 

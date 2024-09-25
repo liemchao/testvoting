@@ -12,7 +12,7 @@ import Iconify from "assets/theme/components/icon/Iconify";
 import LogoutIcon from "@mui/icons-material/Logout";
 const getIcon = (name) => <Iconify icon={name} width={22} height={22} />;
 import Logo from "assets/images/Logo_main.png";
-import Logo2 from "assets/images/styled pink.png";
+import Logo2 from "assets/images/styled pink 2023.png";
 import Logo1 from "assets/images/full.png";
 import { useSelector } from "react-redux";
 const MENU_OPTIONS = [

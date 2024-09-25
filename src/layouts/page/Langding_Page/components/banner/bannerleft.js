@@ -1,7 +1,7 @@
 import { makeStyles } from "@mui/styles";
 import { Box, Container, Grid, Typography } from "@mui/material";
 import MainCard from "components/Cards/cardCampaignMain";
-import Logo1 from "assets/images/styled pink.png";
+import Logo1 from "assets/images/styled pink 2023.png";
 import CardText from "components/Cards/CardText";
 import { CardContent } from "@mui/joy";
 import { Card } from "@mui/material";

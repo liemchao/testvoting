@@ -3,18 +3,19 @@ import { Card } from "@mui/material";
 import CardContent from "@mui/joy/CardContent";
 import Typography from "@mui/joy/Typography";
 import Sheet from "@mui/joy/Sheet";
-import ButtonCustomize from "assets/theme/components/button/ButtonCustomize";
 
 // import boderimage from "../../assets/images/GIOI THIEU - KHUNG TEXT 1.png";
 import ButtonLangding from "assets/theme/components/button/ButtonLangding";
-import Logo1 from "assets/images/Group 9.png";
+import Logo1 from "assets/images/talk.png";
+
+// import các icon từ '@mui/icons-material'
+import { Assessment, CheckCircle, Security } from "@mui/icons-material";
 import { useMediaQuery } from "@mui/material";
+import { getDesiginHome } from "context/redux/action/action";
 import { useDispatch, useSelector } from "react-redux";
 import React, { useEffect, useState } from "react";
-import { getDesiginHome } from "context/redux/action/action";
-import { borderRadius } from "polished";
 
-export default function Section2() {
+export default function Section3() {
   const dispatch = useDispatch();
   const isMobile = useMediaQuery((theme) => theme.breakpoints.down("sm"));
   const [is125Percent, setIs125Percent] = useState(false);
@@ -37,6 +38,12 @@ export default function Section2() {
     };
     callAPI();
   }, []);
+  useEffect(() => {
+    const callAPI = async () => {
+      await dispatch(getDesiginHome());
+    };
+    callAPI();
+  }, []);
   const designhome = useSelector((state) => {
     return state.designhome;
   });
@@ -49,22 +56,19 @@ export default function Section2() {
           justifyContent="center"
           alignItems="center"
           flexDirection={{ xs: "column", sm: "row" }} // Flex direction sẽ thay đổi khi trên web hoặc mobile
-          style={{
-            borderRadius: "20px",
-            border: "2px solid white",
-          }}
+          style={{ width: "100%", border: "2px solid white", borderRadius: "20px" }}
         >
           <img
-            src="https://res.cloudinary.com/ddrq4bfkk/image/upload/f_auto,q_auto/v1/2024/bekdizg3bqwbffiauchc"
-            // {designhome.logo2}
+            src="https://res.cloudinary.com/ddrq4bfkk/image/upload/f_auto,q_auto/v1/2024/mfejvdv2dtpkzhy2mg3w"
+            // src={designhome.logo4}
             alt="Logo"
             style={{
-              padding: "2rem",
-              width: isMobile ? "20rem" : is125Percent ? "30rem" : "36rem",
+              width: isMobile ? "15rem" : is125Percent ? "25rem" : "30rem",
               height: "auto",
-              marginTop: isMobile ? "-1rem" : is125Percent ? "1rem" : "1rem",
+              marginTop: isMobile ? "1rem" : is125Percent ? "1%" : "2%",
               height: "auto",
-              marginLeft: isMobile ? "0%" : is125Percent ? "3%" : "3%",
+              marginLeft: isMobile ? "40%" : is125Percent ? "2%" : "3%",
+              marginRight: "9.2rem",
             }}
           />
           <Box
@@ -72,9 +76,7 @@ export default function Section2() {
               width: "100%",
               position: "relative",
               overflow: { xs: "initial", sm: "initial" }, // Overflow thay đổi khi trên web hoặc mobile
-              marginTop: isMobile ? "-6rem" : "-1rem",
-              marginRight: isMobile ? "3rem" : "9.2rem",
-              marginLeft: isMobile ? "15%" : is125Percent ? "10%" : "15%",
+              marginTop: isMobile ? "-7%" : "-1rem",
             }}
           >
             <Box
@@ -140,11 +142,7 @@ export default function Section2() {
                     position: "relative",
                   }}
                 >
-                  <div
-                    style={{
-                      marginTop: isMobile ? "1rem" : is125Percent ? "1rem" : "-2rem",
-                    }}
-                  >
+                  <div style={{ marginTop: "-2rem" }}>
                     <Typography
                       fontSize={isMobile ? "30px" : is125Percent ? "40px" : "60px"} // Kích thước font chữ thay đổi khi trên web hoặc mobile
                       sx={{
@@ -154,34 +152,31 @@ export default function Section2() {
                         textAlign: "start", // Đặt font chữ tùy chỉnh
                       }}
                     >
-                      Các mốc thời gian
+                      Vinh danh top 10 giảng viên
                     </Typography>
 
                     <Typography
                       level="body"
                       fontWeight="normal"
-                      fontSize={isMobile ? "15px" : is125Percent ? "20px" : "27px"} // Kích thước font chữ thay đổi khi trên web hoặc mobile
+                      fontSize={isMobile ? "15px" : is125Percent ? "20px" : "27px"}
                       sx={{
+                        marginLeft: "2rem",
                         color: designhome.textColor,
                         fontFamily: "UTM Swiss Condensed Regular",
-                        // Đặt font chữ tùy chỉnh
-                        marginTop: isMobile ? "0rem" : "0.5rem",
-                        marginLeft: isMobile ? "5%" : is125Percent ? "1rem" : "2rem",
-                        textAlign: "start", // Căn giữa nội dung
+                        marginTop: isMobile ? "0.3rem" : "0rem",
+                        textAlign: "start",
                       }}
                     >
-                      {/* {designhome.description2?.split(".").map((sentence, index) => (
-                        <React.Fragment key={index}>
-                          {index > 0} 
-                          {sentence}
-                          <br /> 
-                        </React.Fragment>
-                      ))} */}
-
-                      <li>Bình chọn</li>
-                      <li>Kết thúc bình chọn</li>
-                      <li>Công bố top 10</li>
-                      <li>Vinh danh top 10</li>
+                      <ul>
+                        <li>
+                          Top 10 giảng viên đạt danh hiệu{" "}
+                          <strong>"Inspiring Instructor Awards"</strong> sẽ được vinh danh trong
+                          ngày hội Convocation Day tại Đại học FPT cơ sở Hồ Chí Minh.
+                        </li>
+                        <li>
+                          Trao tặng <strong>bộ quà tặng dành riêng cho danh hiệu này.</strong>
+                        </li>
+                      </ul>
                     </Typography>
                   </div>
                 </Sheet>

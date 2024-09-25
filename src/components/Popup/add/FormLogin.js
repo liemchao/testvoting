@@ -14,7 +14,7 @@ import jwt_decode from "jwt-decode";
 import Checkbox from "@mui/material/Checkbox";
 import { useFormik } from "formik";
 import { Box, Button, Dialog, DialogContent, Typography } from "@mui/material";
-import { LoginCheck, loginFirebase } from "../../../context/redux/action/action";
+import { LoginCheck, loginFirebase } from "../../../context/redux/action/action.js";
 import { useDispatch } from "react-redux";
 import firebase, { auth } from "../../../config/Firebase/firebase.js";
 import GoogleButton from "components/Control/GoogleButton";
